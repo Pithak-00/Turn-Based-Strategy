@@ -584,6 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5108129b0d51f4ac394a3c67331b7391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 737638341}
 --- !u!4 &506682517
 Transform:
   m_ObjectHideFlags: 0
@@ -1098,6 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b44f88c1b1bb4fca8e36d23e2d99e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cinemachineVirtualCamera: {fileID: 577388010}
 --- !u!1001 &3043081751338846259
 PrefabInstance:
   m_ObjectHideFlags: 0
