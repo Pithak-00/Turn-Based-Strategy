@@ -42,6 +42,11 @@ public class UnitActionSystem : MonoBehaviour
             return;
         }
 
+        if (!TurnSystem.Instance.IsPlayerTurn())
+        {
+            return;
+        }
+
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -106,6 +111,13 @@ public class UnitActionSystem : MonoBehaviour
                         // Unitは既に選択中
                         return false;
                     }
+
+                    if (unit.IsEnemy())
+                    {
+                        // 敵に選択
+                        return false;
+                    }
+
                     SetSelectedUnit(unit);
                     return true;
                 }
