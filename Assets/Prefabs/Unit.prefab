@@ -77,7 +77,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 954a1229ce11f424591ab68889a12322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitAnimator: {fileID: 3129860349564749700}
   maxMoveDistance: 4
 --- !u!114 &2900455062903761016
 MonoBehaviour:
@@ -116,6 +115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3129860349564749700}
+  bulletProjectilePrefab: {fileID: 2410840376424203086, guid: 4fa67904f1a0d41c7b5646bbb6ab1376,
+    type: 3}
+  shootPointTransform: {fileID: 3666993981969882383}
 --- !u!1 &5565022525416593976
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +215,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 3043081751706599414}
+--- !u!1 &6830659018334564469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3666993981969882383}
+  m_Layer: 7
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3666993981969882383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830659018334564469}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0016, y: 0.0887, z: 0.738}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3038619678131548553}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3043081749824955109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,6 +351,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 25af05085d2957e42ac6b80b69ddd26a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c25ac4fdc903e7d49a7520930673ecd6, type: 3}
+--- !u!4 &3038619678131548553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4620998167008108, guid: c25ac4fdc903e7d49a7520930673ecd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3043081749824955109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3043081751199640028
 PrefabInstance:
   m_ObjectHideFlags: 0
