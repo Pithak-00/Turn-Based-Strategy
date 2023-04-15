@@ -20,6 +20,8 @@ public class ShootAction : BaseAction
         Cooloff,
     }
 
+    [SerializeField] private LayerMask obstaclesLayerMask;
+
     private State state;
     private int maxShootDistance = 2;
     private float stateTimer;
@@ -132,6 +134,20 @@ public class ShootAction : BaseAction
                     continue;
                 }
 
+                Vector3 unitWorldPosition = LevelGrid.Instance.GetWorldPosition(unitGridPosition);
+                Vector3 shootDir = (targetUnit.GetWorldPosition() - unit.GetWorldPosition()).normalized;
+
+                float unitShoulderHeight = 1.7f;
+                if(Physics.Raycast(
+                    unitWorldPosition + Vector3.up * unitShoulderHeight,
+                    shootDir,
+                    Vector3.Distance(unitWorldPosition, targetUnit.GetWorldPosition()),
+                    obstaclesLayerMask))
+                {
+                    //障害物により、ブロック
+                    continue;
+                }
+                    
                 validGridPositionList.Add(testGridPosition);
             }
         }
