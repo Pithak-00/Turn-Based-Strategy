@@ -141,8 +141,12 @@ public class GridSystemVisual : MonoBehaviour
                 break;
         }
 
-        ShowGridPositionList(
-            selectedAction.GetValidActionGridPositionList(),gridVisualType);
+        //TODO:死亡の際、グリッド表示させないように
+        if (selectedUnit != null)
+        {
+            ShowGridPositionList(
+                selectedAction.GetValidActionGridPositionList(), gridVisualType);
+        }
     }
 
     private void UnitActionSystem_OnSelectedActionChanged(object sender, EventArgs e)
