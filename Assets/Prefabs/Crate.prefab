@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4618318869148385424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 0, z: 17.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59,6 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc00d0f165f946aa86e653e5f7a9b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crateDestroyedPrefab: {fileID: 316079989869752347, guid: eeb1d3f49d94f4e41bbb5ce43c9f59c0,
+    type: 3}
 --- !u!1001 &7863784537054322820
 PrefabInstance:
   m_ObjectHideFlags: 0
