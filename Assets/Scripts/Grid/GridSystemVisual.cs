@@ -169,6 +169,9 @@ public class GridSystemVisual : MonoBehaviour
 
                 ShowGridPositionRangeSquare(selectedUnit.GetGridPosition(), swordAction.GetMaxSwordDistance(), GridVisualType.RedSoft);
                 break;
+            case InteractAction interactAction:
+                gridVisualType = GridVisualType.Blue;
+                break;
         }
 
         //TODO:死亡の際、グリッド表示させないように
