@@ -57,6 +57,11 @@ public class UnitActionSystem : MonoBehaviour
             return;
         }
 
+        if(selectedUnit == null)
+        {
+            return;
+        }
+
         HandleSelectedAction();
     }
 

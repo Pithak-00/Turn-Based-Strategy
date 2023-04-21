@@ -7,7 +7,7 @@ public class GrenadeAction : BaseAction
 {
     [SerializeField] private Transform grenadeProjectilePrefab;
 
-    private int maxThrowDistance = 7;
+    private int maxThrowDistance = 4;
 
     private void Update()
     {

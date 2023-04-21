@@ -57,7 +57,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2026,16 +2026,16 @@ MonoBehaviour:
   - {x: -1, y: 0, z: 0, w: 1}
   - {x: -1, y: 0, z: 0, w: 1}
   - {x: 0.0000002621144, y: 1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0.0000005242288, y: 1, z: 0, w: 1}
   - {x: 0.0000005242288, y: 1, z: 0, w: 1}
   - {x: 0.00000033970514, y: -1, z: 0, w: 1}
   - {x: -0, y: -1, z: 0, w: 1}
   - {x: 0.00000046272166, y: -1, z: 0, w: 1}
   - {x: 0.00000086393504, y: -1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
@@ -2185,12 +2185,12 @@ MonoBehaviour:
   - {x: 0, y: -1, z: 0, w: 1}
   - {x: 0, y: -1, z: 0, w: 1}
   - {x: -0.00000004067488, y: 1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0.0000002214395, y: 1, z: 0, w: 1}
   - {x: 0.0000002621144, y: 1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 1, y: -0.00000072413474, z: 0, w: 1}
   - {x: 1, y: 0.0000003038656, z: 0, w: 1}
   - {x: 1, y: 0.00000015193277, z: 0, w: 1}
@@ -2387,7 +2387,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3514,7 +3514,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5989,9 +5989,9 @@ MonoBehaviour:
   - {x: 0, y: 1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: -0, y: -1, z: 0, w: 1}
   - {x: 0.00000016985256, y: -1, z: 0, w: 1}
   - {x: 0.00000016985256, y: -1, z: 0, w: 1}
@@ -6224,7 +6224,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8286,9 +8286,9 @@ MonoBehaviour:
   - {x: 0.00000028908514, y: -1, z: 0, w: 1}
   - {x: 0.000000090338894, y: -1, z: 0, w: 1}
   - {x: -0.00000043196752, y: -1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
@@ -8386,10 +8386,10 @@ MonoBehaviour:
   - {x: 0, y: -1, z: 0, w: 1}
   - {x: 0, y: -1, z: 0, w: 1}
   - {x: 0, y: -1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: -0, y: 1, z: 0, w: 1}
   - {x: -0, y: 1, z: 0, w: 1}
   - {x: 0.0000001561249, y: 1, z: 0, w: 1}
@@ -8450,8 +8450,8 @@ MonoBehaviour:
   - {x: 0.00000028908514, y: -1, z: 0, w: 1}
   - {x: -0, y: -1, z: 0, w: 1}
   - {x: -0.00000009784484, y: -1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0.00000038470475, y: -1, z: 0, w: 1}
   - {x: 0.000000090338894, y: -1, z: 0, w: 1}
   - {x: 0.00000022043412, y: -1, z: 0, w: 1}
@@ -8657,7 +8657,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9731,7 +9731,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11089,9 +11089,9 @@ MonoBehaviour:
   - {x: 1, y: 0.0000002262894, z: 0.0000009051576, w: 1}
   - {x: 0, y: 1, z: 0.00000022551203, w: 1}
   - {x: 0, y: 1, z: 0.0000003006827, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: -0, y: 1, z: 0, w: 1}
   - {x: -0.00000044776476, y: 1, z: 0, w: 1}
   - {x: -0.00000029850983, y: 1, z: 0, w: 1}
@@ -11308,7 +11308,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12823,9 +12823,9 @@ MonoBehaviour:
   - {x: -0, y: -1, z: 0, w: 1}
   - {x: -0, y: -1, z: 0, w: 1}
   - {x: -0.00000007971546, y: -1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0.00000031400901, y: 0.19695663, z: -0.98041224, w: -1}
   - {x: 0, y: 1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
@@ -12840,12 +12840,12 @@ MonoBehaviour:
   - {x: -0.00000017250349, y: 1, z: 0, w: 1}
   - {x: -0, y: 1, z: 0, w: 1}
   - {x: -0.00000015314225, y: 1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: -0.00000006528744, y: 0.109201066, z: 0.9940197, w: -1}
   - {x: -0.9702941, y: -0.24192852, z: -0.00000005628194, w: -1}
   - {x: -1, y: 0, z: 0, w: -1}
@@ -13026,7 +13026,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14643,7 +14643,7 @@ MonoBehaviour:
   - {x: 0, y: -1, z: 0, w: 1}
   - {x: 0, y: -1, z: 0, w: 1}
   - {x: 0.00000022435353, y: -1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0.0000005562353, y: -1, z: 0, w: 1}
   - {x: 0.0000009803997, y: -1, z: 0, w: 1}
   - {x: 0.0000005562353, y: -1, z: 0, w: 1}
@@ -14663,7 +14663,7 @@ MonoBehaviour:
   - {x: 0.00000018852002, y: 1, z: 0, w: 1}
   - {x: 2.498297e-14, y: 1, z: 0, w: 1}
   - {x: 1.2491485e-14, y: 1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0, y: -1, z: -0.0000000903878, w: -1}
   - {x: 0, y: -1, z: 6.862311e-14, w: 1}
   - {x: 0, y: -1, z: -0.0000000903878, w: -1}
@@ -14855,7 +14855,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15875,7 +15875,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17492,7 +17492,7 @@ MonoBehaviour:
   - {x: -0, y: -1, z: 0, w: 1}
   - {x: -0, y: -1, z: 0, w: 1}
   - {x: -0, y: -1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
@@ -17502,7 +17502,7 @@ MonoBehaviour:
   - {x: -0.0000003006828, y: -1, z: 0, w: 1}
   - {x: 0.00000009953213, y: 0.36841723, z: -0.92966056, w: 1}
   - {x: 0.0000002459397, y: -1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: -0.00000030068298, y: -1, z: 0, w: 1}
   - {x: 0.0000003211103, y: -1, z: 0, w: 1}
   - {x: 0, y: -1, z: 0, w: 1}
@@ -17708,7 +17708,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18729,7 +18729,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40347e2344b3ed04a8165ea238a93a0b, type: 2}
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d34835802ff09465494986fe4546e8bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20170,7 +20170,7 @@ MonoBehaviour:
   - {x: 0, y: -1, z: 0, w: 1}
   - {x: -0.9593588, y: 0.2821892, z: 0, w: 1}
   - {x: 0.00000015034139, y: -1, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: NaN, y: NaN, z: NaN, w: 1}
   - {x: 0.000000075170696, y: -1, z: 0, w: 1}
   - {x: 0.0000002446014, y: -1, z: 0, w: 1}
   - {x: 0, y: 1, z: 0, w: 1}
