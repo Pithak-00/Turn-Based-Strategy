@@ -153,6 +153,9 @@ public class GridSystemVisual : MonoBehaviour
             case MoveAction moveAction:
                 gridVisualType = GridVisualType.Yellow;
                 break;
+            case WaitAction waitAction:
+                gridVisualType = GridVisualType.Blue;
+                break;
             case SpinAction spinAction:
                 gridVisualType = GridVisualType.Blue;
                 break;
@@ -168,6 +171,11 @@ public class GridSystemVisual : MonoBehaviour
                 gridVisualType = GridVisualType.Red;
 
                 ShowGridPositionRangeSquare(selectedUnit.GetGridPosition(), swordAction.GetMaxDistance(), GridVisualType.RedSoft);
+                break;
+            case PunchAction punchAction:
+                gridVisualType = GridVisualType.Red;
+
+                ShowGridPositionRangeSquare(selectedUnit.GetGridPosition(), punchAction.GetMaxDistance(), GridVisualType.RedSoft);
                 break;
             case InteractAction interactAction:
                 gridVisualType = GridVisualType.Blue;

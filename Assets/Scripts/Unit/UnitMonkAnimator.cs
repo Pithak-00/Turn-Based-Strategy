@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitWarriorAnimator : MonoBehaviour
+public class UnitMonkAnimator : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
@@ -15,15 +15,15 @@ public class UnitWarriorAnimator : MonoBehaviour
             moveAction.OnStopMoving += MoveAction_OnStopMoving;
         }
 
-        if (TryGetComponent<SwordAction>(out SwordAction swordAction))
+        if (TryGetComponent<PunchAction>(out PunchAction punchAction))
         {
-            swordAction.OnActionStarted += SwordAction_OnSwordActionStarted;
+            punchAction.OnActionStarted += PunchAction_OnSwordActionStarted;
         }
     }
 
-    private void SwordAction_OnSwordActionStarted(object sender, EventArgs e)
+    private void PunchAction_OnSwordActionStarted(object sender, EventArgs e)
     {
-        animator.SetTrigger("SwordSlash");
+        animator.SetTrigger("Punch");
     }
 
     private void MoveAction_OnStartMoving(object sender, EventArgs e)

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwordAction : BaseAction
+public class PunchAction : BaseAction
 {
     public static event EventHandler OnAnyHit;
 

@@ -26,8 +26,8 @@ public class UnitAnimator : MonoBehaviour
 
         if (TryGetComponent<SwordAction>(out SwordAction swordAction))
         {
-            swordAction.OnSwordActionStarted += SwordAction_OnSwordActionStarted;
-            swordAction.OnSwordActionCompleted += SwordAction_OnSwordActionCompleted;
+            swordAction.OnActionStarted += SwordAction_OnSwordActionStarted;
+            swordAction.OnActionCompleted += SwordAction_OnSwordActionCompleted;
         }
     }
 
