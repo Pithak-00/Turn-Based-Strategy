@@ -20,7 +20,9 @@ public class GridSystemVisual : MonoBehaviour
         Blue,
         Red,
         RedSoft,
-        Yellow
+        Yellow,
+        Green,
+        GreenSoft
     }
 
     [SerializeField] private Transform gridSystemVisualSinglePrefab;
@@ -176,6 +178,16 @@ public class GridSystemVisual : MonoBehaviour
                 gridVisualType = GridVisualType.Red;
 
                 ShowGridPositionRangeSquare(selectedUnit.GetGridPosition(), punchAction.GetMaxDistance(), GridVisualType.RedSoft);
+                break;
+            case RodAction rodAction:
+                gridVisualType = GridVisualType.Red;
+
+                ShowGridPositionRangeSquare(selectedUnit.GetGridPosition(), rodAction.GetMaxDistance(), GridVisualType.RedSoft);
+                break;
+            case HealAction healAction:
+                gridVisualType = GridVisualType.Green;
+
+                ShowGridPositionRange(selectedUnit.GetGridPosition(), healAction.GetMaxShootDistance(), GridVisualType.GreenSoft);
                 break;
             case InteractAction interactAction:
                 gridVisualType = GridVisualType.Blue;

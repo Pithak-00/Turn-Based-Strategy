@@ -111,7 +111,7 @@ public class UnitActionSystem : MonoBehaviour
             {
                 if (raycastHit.transform.TryGetComponent<Unit>(out Unit unit))
                 {
-                    if(unit == selectedUnit)
+                    if (unit == selectedUnit)
                     {
                         // Unitは既に選択中
                         return false;
@@ -120,6 +120,12 @@ public class UnitActionSystem : MonoBehaviour
                     if (unit.IsEnemy())
                     {
                         // 敵に選択
+                        return false;
+                    }
+
+                    if (selectedAction == selectedUnit.GetAction<HealAction>())
+                    {
+                        // ヒールコマンド選択中
                         return false;
                     }
 
