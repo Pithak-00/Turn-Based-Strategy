@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12921bafc0b014f97961f22be78d42e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionPointsMax: 2
   isEnemy: 0
 --- !u!65 &8284229164495468407
 BoxCollider:
@@ -310,7 +311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 954a1229ce11f424591ab68889a12322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMoveDistance: 4
+  actionPointsCost: 1
+  maxDistance: 4
 --- !u!114 &2900455062903761016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34931905e471143ab80a3b4de67c85cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionPointsCost: 1
+  maxDistance: 1
+  damagePoint: 100
 --- !u!114 &3465784041231664958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0e76dc6343f4cac93cf509ec381526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 500
 --- !u!114 &5407722700423064427
 MonoBehaviour:
   m_ObjectHideFlags: 0

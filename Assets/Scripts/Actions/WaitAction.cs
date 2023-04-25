@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class WaitAction : BaseAction
 {
+    [SerializeField] private int actionPointsCost;
+    [SerializeField] private int maxDistance;
+
     private int waitTimeSecond = 2;
-    private float waitTime;
+    private float waitTimer;
 
     private void Update()
     {
@@ -15,9 +18,9 @@ public class WaitAction : BaseAction
             return;
         }
 
-        waitTime += Time.deltaTime;
+        waitTimer += Time.deltaTime;
 
-        if (waitTime >= waitTimeSecond)
+        if (waitTimer >= waitTimeSecond)
         {
             ActionComplete();
         }
@@ -49,7 +52,12 @@ public class WaitAction : BaseAction
 
     public override void TakeAction(GridPosition gridPosition, Action onActionComplete)
     {
-        waitTime = 0;
+        waitTimer = 0;
         ActionStart(onActionComplete);
+    }
+
+    public override int GetActionPointsCost()
+    {
+        return actionPointsCost;
     }
 }

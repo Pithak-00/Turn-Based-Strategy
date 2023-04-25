@@ -8,7 +8,8 @@ public class MoveAction : BaseAction
     public event EventHandler OnStartMoving;
     public event EventHandler OnStopMoving;
 
-    [SerializeField] private int maxMoveDistance = 4;
+    [SerializeField] private int actionPointsCost;
+    [SerializeField] private int maxDistance;
 
     private List<Vector3> positionList;
     private int currentPositionIndex;
@@ -68,9 +69,9 @@ public class MoveAction : BaseAction
 
         GridPosition unitGridPosition = unit.GetGridPosition();
 
-        for(int x = -maxMoveDistance; x <= maxMoveDistance; x++)
+        for(int x = -maxDistance; x <= maxDistance; x++)
         {
-            for(int z = -maxMoveDistance; z <= maxMoveDistance; z++)
+            for(int z = -maxDistance; z <= maxDistance; z++)
             {
                 GridPosition offsetGridPosition = new GridPosition(x, z);
                 GridPosition testGridPosition = unitGridPosition + offsetGridPosition;
@@ -103,7 +104,7 @@ public class MoveAction : BaseAction
                 }
 
                 int pathfindingDistanceMultiplier = 10;
-                if(Pathfinding.Instance.GetPathLength(unitGridPosition, testGridPosition)> maxMoveDistance * pathfindingDistanceMultiplier)
+                if(Pathfinding.Instance.GetPathLength(unitGridPosition, testGridPosition)> maxDistance * pathfindingDistanceMultiplier)
                 {
                     //道の長さが長すぎ
                     continue;
@@ -130,5 +131,10 @@ public class MoveAction : BaseAction
             gridPosition = gridPosition,
             actionValue = targetCountAtGridPosition * 10,
         };
+    }
+
+    public override int GetActionPointsCost()
+    {
+        return actionPointsCost;
     }
 }

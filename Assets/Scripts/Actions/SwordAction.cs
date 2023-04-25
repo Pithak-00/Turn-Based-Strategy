@@ -10,13 +10,16 @@ public class SwordAction : BaseAction
     public event EventHandler OnSwordActionStarted;
     public event EventHandler OnSwordActionCompleted;
 
+    [SerializeField] private int actionPointsCost;
+    [SerializeField] private int maxDistance;
+    [SerializeField] private int damagePoint;
+
     private enum State
     {
         SwingingSwordBeforeHit,
         SwingingSwordAfterHit,
     }
 
-    private int maxSwordDistance = 1;
     private State state;
     private float stateTimer;
     private Unit targetUnit;
@@ -55,7 +58,7 @@ public class SwordAction : BaseAction
                 state = State.SwingingSwordAfterHit;
                 float afterHitStateTime = 0.5f;
                 stateTimer = afterHitStateTime;
-                targetUnit.Damage(100);
+                targetUnit.Damage(damagePoint);
                 OnAnySwordHit?.Invoke(this, EventArgs.Empty);
                 break;
             case State.SwingingSwordAfterHit:
@@ -85,9 +88,9 @@ public class SwordAction : BaseAction
 
         GridPosition unitGridPosition = unit.GetGridPosition();
 
-        for (int x = -maxSwordDistance; x <= maxSwordDistance; x++)
+        for (int x = -maxDistance; x <= maxDistance; x++)
         {
-            for (int z = -maxSwordDistance; z <= maxSwordDistance; z++)
+            for (int z = -maxDistance; z <= maxDistance; z++)
             {
                 GridPosition offsetGridPosition = new GridPosition(x, z);
                 GridPosition testGridPosition = unitGridPosition + offsetGridPosition;
@@ -131,8 +134,13 @@ public class SwordAction : BaseAction
         ActionStart(onActionComplete);
     }
 
-    public int GetMaxSwordDistance()
+    public override int GetActionPointsCost()
     {
-        return maxSwordDistance;
+        return actionPointsCost;
+    }
+
+    public int GetMaxDistance()
+    {
+        return maxDistance;
     }
 }
