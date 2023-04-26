@@ -614,7 +614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Unit Unselect
+  m_text: Cancel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5647,22 +5647,22 @@ PrefabInstance:
     - target: {fileID: 8331279844328097467, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001641038
+      value: -0.000000016410377
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844328097467, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000051729163
+      value: 0.0000000051729154
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844575948442, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001641038
+      value: -0.000000016410377
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844575948442, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000051729163
+      value: 0.0000000051729154
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844969784168, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
