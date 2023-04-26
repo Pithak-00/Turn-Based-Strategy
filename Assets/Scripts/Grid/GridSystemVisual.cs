@@ -184,6 +184,11 @@ public class GridSystemVisual : MonoBehaviour
 
                 ShowGridPositionRangeSquare(selectedUnit.GetGridPosition(), rodAction.GetMaxDistance(), GridVisualType.RedSoft);
                 break;
+            case MagicAction magicAction:
+                gridVisualType = GridVisualType.Red;
+
+                ShowGridPositionRangeSquare(selectedUnit.GetGridPosition(), magicAction.GetMaxDistance(), GridVisualType.RedSoft);
+                break;
             case HealAction healAction:
                 gridVisualType = GridVisualType.Green;
 
