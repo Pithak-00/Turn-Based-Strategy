@@ -57,6 +57,8 @@ public class UnitActionSystem : MonoBehaviour
             return;
         }
 
+        //TODO:選択中キャラは死亡で行動できないようにする
+        //選択中状態を抜け出す方法を考えるべき
         if(selectedUnit == null)
         {
             return;
@@ -123,11 +125,12 @@ public class UnitActionSystem : MonoBehaviour
                         return false;
                     }
 
-                    if (selectedAction == selectedUnit.GetAction<HealAction>())
-                    {
-                        // ヒールコマンド選択中
-                        return false;
-                    }
+                    //TODO:ヒールコマンド選択中を修正
+                    //  if (selectedAction == selectedUnit.GetAction<HealAction>())
+                    //  {
+                    // ヒールコマンド選択中
+                    //      return false;
+                    //  }
 
                     SetSelectedUnit(unit);
                     return true;
@@ -138,11 +141,14 @@ public class UnitActionSystem : MonoBehaviour
         return false;
     }
 
-    private void SetSelectedUnit(Unit unit)
+    public void SetSelectedUnit(Unit unit)
     {
         selectedUnit = unit;
 
-        selectedAction = unit.GetAction<MoveAction>();
+        if (selectedUnit != null)
+        {
+            selectedAction = unit.GetAction<MoveAction>();
+        }
 
         OnSelectedUnitChanged?.Invoke(this, EventArgs.Empty);
     }
