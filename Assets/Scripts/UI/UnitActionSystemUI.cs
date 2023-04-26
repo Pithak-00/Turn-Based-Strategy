@@ -85,11 +85,11 @@ public class UnitActionSystemUI : MonoBehaviour
 
         if (selectedUnit != null)
         {
-            actionPointsText.text = "Action Points: " + selectedUnit.GetActionPoints();
+            actionPointsText.text = "行動ポイント: " + selectedUnit.GetActionPoints();
         }
         else
         {
-            actionPointsText.text = "Action Points: 0";
+            actionPointsText.text = "行動ポイント: 0";
         }
     }
 

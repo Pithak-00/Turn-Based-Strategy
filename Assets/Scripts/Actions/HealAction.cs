@@ -106,7 +106,7 @@ public class HealAction : BaseAction
 
     public override string GetActionName()
     {
-        return "Heal";
+        return "ヒール";
     }
 
     public override List<GridPosition> GetValidActionGridPositionList()

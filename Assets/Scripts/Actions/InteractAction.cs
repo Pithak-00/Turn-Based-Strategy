@@ -9,7 +9,7 @@ public class InteractAction : BaseAction
 
     public override string GetActionName()
     {
-        return "Interact";
+        return "決定";
     }
 
     private void Update()

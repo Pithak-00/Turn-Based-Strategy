@@ -21,7 +21,7 @@ public class MagicAction : BaseAction
 
     public override string GetActionName()
     {
-        return "Magic";
+        return "爆弾の魔法";
     }
 
     public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)

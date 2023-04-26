@@ -28,7 +28,7 @@ public class WaitAction : BaseAction
 
     public override string GetActionName()
     {
-        return "Wait";
+        return "待機";
     }
 
     public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)

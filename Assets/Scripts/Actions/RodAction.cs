@@ -70,7 +70,7 @@ public class RodAction : BaseAction
 
     public override string GetActionName()
     {
-        return "Attack";
+        return "攻撃";
     }
 
     public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)

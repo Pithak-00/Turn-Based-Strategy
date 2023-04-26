@@ -70,7 +70,7 @@ public class PunchAction : BaseAction
 
     public override string GetActionName()
     {
-        return "Attack";
+        return "パンチ";
     }
 
     public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)

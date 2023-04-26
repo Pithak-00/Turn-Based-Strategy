@@ -119,7 +119,7 @@ public class MoveAction : BaseAction
 
     public override string GetActionName()
     {
-        return "Move";
+        return "移動";
     }
 
     public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)
