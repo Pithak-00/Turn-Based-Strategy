@@ -126,11 +126,11 @@ public class UnitActionSystem : MonoBehaviour
                     }
 
                     //TODO:ヒールコマンド選択中を修正
-                    //  if (selectedAction == selectedUnit.GetAction<HealAction>())
-                    //  {
+                      if (selectedUnit != null && selectedAction == selectedUnit.GetAction<HealAction>())
+                      {
                     // ヒールコマンド選択中
-                    //      return false;
-                    //  }
+                          return false;
+                      }
 
                     SetSelectedUnit(unit);
                     return true;

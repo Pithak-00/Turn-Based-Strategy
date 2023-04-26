@@ -148,6 +148,8 @@ public class Unit : MonoBehaviour
 
         Destroy(gameObject);
 
+        UnitActionSystem.Instance.SetSelectedUnit(null);
+
         OnAnyUnitDead?.Invoke(this, EventArgs.Empty);
     }
 

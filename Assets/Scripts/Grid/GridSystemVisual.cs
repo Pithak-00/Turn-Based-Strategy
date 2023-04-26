@@ -146,7 +146,10 @@ public class GridSystemVisual : MonoBehaviour
 
         GridVisualType gridVisualType;
 
-        switch(selectedAction)
+        //TODO:死亡の際、グリッド表示させないように
+        if (selectedUnit != null)
+        {
+            switch (selectedAction)
         {
             default:
             case MoveAction moveAction:
@@ -196,9 +199,7 @@ public class GridSystemVisual : MonoBehaviour
                 break;
         }
 
-        //TODO:死亡の際、グリッド表示させないように
-        if (selectedUnit != null)
-        {
+        
             ShowGridPositionList(
                 selectedAction.GetValidActionGridPositionList(), gridVisualType);
         }
