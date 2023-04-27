@@ -8,6 +8,8 @@ using TMPro;
 public class UnitWorldUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI actionPointsText;
+    [SerializeField] private TextMeshProUGUI damagePointsText;
+    [SerializeField] private TextMeshProUGUI healPointsText;
     [SerializeField] private Unit unit;
     [SerializeField] private Image healthBarImage;
     [SerializeField] private HealthSystem healthSystem;
@@ -37,13 +39,15 @@ public class UnitWorldUI : MonoBehaviour
         healthBarImage.fillAmount = healthSystem.GetHealthNormalized();
     }
 
-    private void HealthSystem_OnDamaged(object sender, EventArgs e)
+    private void HealthSystem_OnDamaged(object sender, int damageAmount)
     {
         UpdateHealthBar();
+        damagePointsText.text = damageAmount.ToString();
     }
 
-    private void HealthSystem_OnHealed(object sender, EventArgs e)
+    private void HealthSystem_OnHealed(object sender, int healAmount)
     {
         UpdateHealthBar();
+        healPointsText.text = healAmount.ToString();
     }
 }
