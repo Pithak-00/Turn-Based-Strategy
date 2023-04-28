@@ -1695,6 +1695,7 @@ MonoBehaviour:
   audioSource: {fileID: 7218837221884324070}
   audioClipList:
   - {fileID: 8300000, guid: af763404060f94b2380ccb07d6aa3b46, type: 3}
+  - {fileID: 8300000, guid: e750aae227f724265a69629664ced6bf, type: 3}
   audoPlay: 0
 --- !u!95 &3129860349564749700 stripped
 Animator:
