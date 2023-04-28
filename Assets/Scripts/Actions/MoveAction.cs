@@ -32,6 +32,9 @@ public class MoveAction : BaseAction
         {    
             float moveSpeed = 4f;
             transform.position += moveDirection * moveSpeed * Time.deltaTime;
+
+            //音生成
+            //SeUnit.Instance.PlaySe("Moving");
         }
         else
         {

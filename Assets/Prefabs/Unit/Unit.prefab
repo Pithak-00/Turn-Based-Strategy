@@ -313,6 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionPointsCost: 1
   maxDistance: 4
+  seUnit: {fileID: 0}
 --- !u!114 &2900455062903761016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +545,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionPointsText: {fileID: 8431748164920180238}
+  damagePointsText: {fileID: 0}
+  healPointsText: {fileID: 0}
   unit: {fileID: 3043081751706599414}
   healthBarImage: {fileID: 7862412598840189404}
   healthSystem: {fileID: 669971373963406315}
