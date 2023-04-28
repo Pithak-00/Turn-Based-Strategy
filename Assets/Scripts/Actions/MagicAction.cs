@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class MagicAction : BaseAction
 {
+    public event EventHandler OnStartAction;
+
     [SerializeField] private Transform magicProjectilePrefab;
 
     [SerializeField] private int actionPointsCost;
@@ -69,6 +71,8 @@ public class MagicAction : BaseAction
         Transform magicProjectileTransform = Instantiate(magicProjectilePrefab, unit.GetWorldPosition(), Quaternion.identity);
         MagicProjectile magicProjectile = magicProjectileTransform.GetComponent<MagicProjectile>();
         magicProjectile.Setup(gridPosition, OnMagicBehaviourComplete);
+
+        OnStartAction?.Invoke(this, EventArgs.Empty);
 
         ActionStart(onActionComplete);
     }

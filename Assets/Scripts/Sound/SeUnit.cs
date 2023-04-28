@@ -6,19 +6,6 @@ using TSM;
 
 public class SeUnit : AudioUnitBase
 {
-    public static SeUnit Instance { get; private set; }
-
-    private void Awake()
-    {
-        if (Instance != null)
-        {
-            Debug.LogError("There's more than one SeUnit! " + transform + " - " + Instance);
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
-
     public override void Start()
     {
         base.Start();

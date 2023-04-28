@@ -20,9 +20,9 @@ public class UnitBlackMageAnimator : MonoBehaviour
             rodAction.OnActionStarted += RodAction_OnRodActionStarted;
         }
 
-        if (TryGetComponent<MagicProjectile>(out MagicProjectile magicProjectile))
+        if (TryGetComponent<MagicAction>(out MagicAction magicAction))
         {
-            magicProjectile.OnAnyMagicUsed += MagicAction_OnMagicActionStarted;
+            magicAction.OnStartAction += MagicAction_OnStartAction;
         }
     }
 
@@ -31,9 +31,10 @@ public class UnitBlackMageAnimator : MonoBehaviour
         animator.SetTrigger("Attack");
     }
 
-    private void MagicAction_OnMagicActionStarted(object sender, EventArgs e)
+    private void MagicAction_OnStartAction(object sender, EventArgs e)
     {
         animator.SetTrigger("Magic");
+        Debug.Log("animationmagic");
     }
 
     private void MoveAction_OnStartMoving(object sender, EventArgs e)
