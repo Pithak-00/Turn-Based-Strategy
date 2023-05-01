@@ -1575,6 +1575,7 @@ MonoBehaviour:
   audioSource: {fileID: 1462720796622485596}
   audioClipList:
   - {fileID: 8300000, guid: af763404060f94b2380ccb07d6aa3b46, type: 3}
+  - {fileID: 8300000, guid: 958408b32ccf3714ea02821877b0870c, type: 3}
   - {fileID: 8300000, guid: cc6699269b4c1d44ea1e860518b9bb73, type: 3}
   audoPlay: 0
 --- !u!95 &3129860349564749700 stripped
