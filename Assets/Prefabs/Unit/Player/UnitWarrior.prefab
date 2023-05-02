@@ -1694,9 +1694,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7218837221884324070}
   audioClipList:
-  - {fileID: 8300000, guid: af763404060f94b2380ccb07d6aa3b46, type: 3}
-  - {fileID: 8300000, guid: e750aae227f724265a69629664ced6bf, type: 3}
+  - m_AssetGUID: af763404060f94b2380ccb07d6aa3b46
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: e750aae227f724265a69629664ced6bf
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   audoPlay: 0
+  AudioClips: []
 --- !u!95 &3129860349564749700 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95787105524477528, guid: 2f3e27eecb190e44a9af50723c394274,
