@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1200664635082287351}
-  audioClipList:
+  audioClipAssetReferenceList:
   - m_AssetGUID: af763404060f94b2380ccb07d6aa3b46
     m_SubObjectName: 
     m_SubObjectType: 

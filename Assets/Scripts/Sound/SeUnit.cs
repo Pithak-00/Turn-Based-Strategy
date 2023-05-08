@@ -18,7 +18,7 @@ public class SeUnit : AudioUnitBase
 
     public void PlaySe(string seName)
     {
-        AudioClip audioClip = audioClipList01.FirstOrDefault(clip => clip.name == seName);
+        AudioClip audioClip = audioClipList.FirstOrDefault(clip => clip.name == seName);
 
         if (audioClip != null)
         {
@@ -40,7 +40,7 @@ public class SeUnit : AudioUnitBase
     /// <param name="seName"></param>
     public void PlaySeRandomPitch(string seName)
     {
-        AudioClip audioClip = audioClipList01.FirstOrDefault(clip => clip.name == seName);
+        AudioClip audioClip = audioClipList.FirstOrDefault(clip => clip.name == seName);
 
         if (audioClip != null)
         {

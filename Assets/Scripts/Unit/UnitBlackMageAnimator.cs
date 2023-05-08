@@ -34,7 +34,6 @@ public class UnitBlackMageAnimator : MonoBehaviour
     private void MagicAction_OnStartAction(object sender, EventArgs e)
     {
         animator.SetTrigger("Magic");
-        Debug.Log("animationmagic");
     }
 
     private void MoveAction_OnStartMoving(object sender, EventArgs e)

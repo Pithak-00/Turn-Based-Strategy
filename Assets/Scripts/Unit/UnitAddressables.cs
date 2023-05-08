@@ -1,30 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Collections;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
+
 public class UnitAddressables : MonoBehaviour
 {
-    public int Index;
-    public List<AssetReferenceT<GameObject>> m_CubeHandle;
-    GameObject prefab;
+    [SerializeField] private AssetReferenceT<GameObject> unitGameObject;
+    [SerializeField] private Transform[] unitPosition;
+
+    private GameObject[] spawnedGameObject;
 
     private void Start()
     {
-        StartCoroutine(LoadAudioClip());
+        LoadUnit();
     }
 
-    IEnumerator LoadAudioClip()
+    private async void LoadUnit()
     {
-        var assetReference = m_CubeHandle[Index];
-        var asyncOperation = assetReference.LoadAssetAsync();
-        while (!asyncOperation.IsDone)
-        {
-            yield return null;
-        }
+        spawnedGameObject = new GameObject[unitPosition.Length];
 
-        prefab = asyncOperation.Result;
-        Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
+        for (int i = 0; i < unitPosition.Length; i++)
+        {
+            AsyncOperationHandle<GameObject> handle = unitGameObject.InstantiateAsync(unitPosition[i].position, unitPosition[i].rotation);
+
+            spawnedGameObject[i] = await handle.Task;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        unitGameObject.ReleaseInstance(spawnedGameObject[0]);
     }
 }

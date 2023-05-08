@@ -13,12 +13,17 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
     protected AudioSource audioSource;
 
     [SerializeField]
-    protected List<AssetReferenceT<AudioClip>> audioClipList;
+    protected List<AssetReferenceT<AudioClip>> audioClipAssetReferenceList;
 
     [SerializeField]
     public bool audoPlay = false;
 
     public bool IsPaused { get; private set; }
+
+    private List<AssetReferenceT<AudioClip>> assetReference;
+    private AsyncOperationHandle<AudioClip> asyncOperation;
+
+    protected List<AudioClip> audioClipList;
 
     public virtual void Start()
     {
@@ -32,24 +37,25 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
         }
     }
 
-    List<AssetReferenceT<AudioClip>> assetReference;
-    AsyncOperationHandle<AudioClip> asyncOperation;
-    protected List<AudioClip> audioClipList01;
-    IEnumerator LoadAudioClip()
+
+    private IEnumerator LoadAudioClip()
     {
-        audioClipList01 = new List<AudioClip>();
-        assetReference = audioClipList;
+        audioClipList = new List<AudioClip>();
+
+        assetReference = audioClipAssetReferenceList;
+
         foreach (var asset in assetReference)
         {
             asyncOperation = asset.LoadAssetAsync();
+
             while (!asyncOperation.IsDone)
             {
                 yield return null;
             }
-            //audioSource.clip = asyncOperation.Result;
+
             if (asyncOperation.Status == AsyncOperationStatus.Succeeded)
             {
-                audioClipList01.Add(asyncOperation.Result);
+                audioClipList.Add(asyncOperation.Result);
             }
             
         }
