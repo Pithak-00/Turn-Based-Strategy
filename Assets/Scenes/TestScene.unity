@@ -723,16 +723,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assetObject: {fileID: 3043081751706599408, guid: 5788c89e4e1c64b779cd789cda81dbad,
+    type: 3}
   unitPosition:
   - {fileID: 484875453}
-  unitGameObject:
-    m_AssetGUID: 5788c89e4e1c64b779cd789cda81dbad
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  spawnedGameObjectList: []
-  testgameobject: {fileID: 209759891926008239, guid: f444c28d4ab5f4a6ea342db875a7e69a,
-    type: 3}
+  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/aa03611a-f3ec-4081-a580-2b29985f2988/versions/fea01a5b-4b89-46f6-8042-a0b7f92320e7/content/
 --- !u!1001 &179808515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1907,15 +1902,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assetObject: {fileID: 0}
   unitPosition:
   - {fileID: 1056487332}
-  unitGameObject:
-    m_AssetGUID: bdc626d3ba98b42fcae4f0c453e827c0
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  spawnedGameObjectList: []
-  testgameobject: {fileID: 0}
+  assetBundleUrl: 
 --- !u!1 &649178492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,15 +1995,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assetObject: {fileID: 0}
   unitPosition:
   - {fileID: 1510087975}
-  unitGameObject:
-    m_AssetGUID: 6e4bbed9d9b364d3ab6854e29b0f2e8a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  spawnedGameObjectList: []
-  testgameobject: {fileID: 0}
+  assetBundleUrl: 
 --- !u!4 &690685209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4195126061862025201, guid: 6b7fb0807ce714929907396590da2530,
@@ -3378,16 +3363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assetObject: {fileID: 0}
   unitPosition:
   - {fileID: 863848655}
   - {fileID: 1865818594}
-  unitGameObject:
-    m_AssetGUID: 834b140b9abf24d81bdb78e52256d4bd
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  spawnedGameObjectList: []
-  testgameobject: {fileID: 0}
+  assetBundleUrl: 
 --- !u!1001 &1219998527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5483,19 +5463,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assetObject: {fileID: 0}
   unitPosition:
   - {fileID: 241381465}
   - {fileID: 212855319}
   - {fileID: 695286776}
   - {fileID: 1756595459}
   - {fileID: 568620383}
-  unitGameObject:
-    m_AssetGUID: 9e7c93aa016604c62ae8cb03fe2ddb82
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  spawnedGameObjectList: []
-  testgameobject: {fileID: 0}
+  assetBundleUrl: 
 --- !u!1 &2061265257
 GameObject:
   m_ObjectHideFlags: 0
@@ -6277,22 +6252,22 @@ PrefabInstance:
     - target: {fileID: 8331279844328097467, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001641038
+      value: -0.000000016410377
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844328097467, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000051729163
+      value: 0.0000000051729154
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844575948442, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001641038
+      value: -0.000000016410377
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844575948442, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000051729163
+      value: 0.0000000051729154
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844969784168, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
