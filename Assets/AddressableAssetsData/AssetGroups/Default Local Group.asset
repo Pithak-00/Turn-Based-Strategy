@@ -17,48 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: d1a4af03da7a8409781db6374710742e
   m_SerializeEntries:
-  - m_GUID: 5788c89e4e1c64b779cd789cda81dbad
-    m_Address: UnitWarrior
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 834b140b9abf24d81bdb78e52256d4bd
-    m_Address: UnitMonk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 6e4bbed9d9b364d3ab6854e29b0f2e8a
-    m_Address: UnitBlackMage
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: bdc626d3ba98b42fcae4f0c453e827c0
-    m_Address: UnitWhiteMage
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 9e7c93aa016604c62ae8cb03fe2ddb82
-    m_Address: UnitEnemy
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: cc6699269b4c1d44ea1e860518b9bb73
-    m_Address: MagicAttack
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 34f9cbd28a9740349b6cc2f5e280dda3
-    m_Address: MagicHeal
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: af763404060f94b2380ccb07d6aa3b46
-    m_Address: Moving
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: e1a75776f005439469f89a17a986c567
-    m_Address: PunchAttack
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 958408b32ccf3714ea02821877b0870c
-    m_Address: RodAttack
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: e750aae227f724265a69629664ced6bf
-    m_Address: SwordAttack
+  - m_GUID: 75082d08f2121475bb569e190da2c34b
+    m_Address: Assets/Scenes/TestScene.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

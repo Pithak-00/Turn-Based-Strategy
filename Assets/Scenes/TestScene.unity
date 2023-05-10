@@ -723,13 +723,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitPosition:
+  - {fileID: 484875453}
   unitGameObject:
     m_AssetGUID: 5788c89e4e1c64b779cd789cda81dbad
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  unitPosition:
-  - {fileID: 484875453}
+  spawnedGameObjectList: []
+  testgameobject: {fileID: 209759891926008239, guid: f444c28d4ab5f4a6ea342db875a7e69a,
+    type: 3}
 --- !u!1001 &179808515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1462,7 +1465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484875452}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 14}
+  m_LocalPosition: {x: 18, y: 0, z: 16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1904,13 +1907,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitPosition:
+  - {fileID: 1056487332}
   unitGameObject:
     m_AssetGUID: bdc626d3ba98b42fcae4f0c453e827c0
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  unitPosition:
-  - {fileID: 1056487332}
+  spawnedGameObjectList: []
+  testgameobject: {fileID: 0}
 --- !u!1 &649178492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2000,13 +2005,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitPosition:
+  - {fileID: 1510087975}
   unitGameObject:
     m_AssetGUID: 6e4bbed9d9b364d3ab6854e29b0f2e8a
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  unitPosition:
-  - {fileID: 1510087975}
+  spawnedGameObjectList: []
+  testgameobject: {fileID: 0}
 --- !u!4 &690685209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4195126061862025201, guid: 6b7fb0807ce714929907396590da2530,
@@ -3371,14 +3378,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitPosition:
+  - {fileID: 863848655}
+  - {fileID: 1865818594}
   unitGameObject:
     m_AssetGUID: 834b140b9abf24d81bdb78e52256d4bd
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  unitPosition:
-  - {fileID: 863848655}
-  - {fileID: 1865818594}
+  spawnedGameObjectList: []
+  testgameobject: {fileID: 0}
 --- !u!1001 &1219998527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5474,17 +5483,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94063b3c4cf604c5982a4196b6e9f228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitGameObject:
-    m_AssetGUID: 9e7c93aa016604c62ae8cb03fe2ddb82
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   unitPosition:
   - {fileID: 241381465}
   - {fileID: 212855319}
   - {fileID: 695286776}
   - {fileID: 1756595459}
   - {fileID: 568620383}
+  unitGameObject:
+    m_AssetGUID: 9e7c93aa016604c62ae8cb03fe2ddb82
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  spawnedGameObjectList: []
+  testgameobject: {fileID: 0}
 --- !u!1 &2061265257
 GameObject:
   m_ObjectHideFlags: 0
@@ -6266,22 +6277,22 @@ PrefabInstance:
     - target: {fileID: 8331279844328097467, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000016410377
+      value: 0.00000001641038
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844328097467, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000051729154
+      value: -0.0000000051729163
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844575948442, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000016410377
+      value: 0.00000001641038
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844575948442, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000051729154
+      value: -0.0000000051729163
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844969784168, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: d1a4af03da7a8409781db6374710742e
+  m_DefaultGroup: e7509b7838c334f5ca10477a2f6126e5
   m_CachedHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -34,15 +34,17 @@ MonoBehaviour:
   m_MonoScriptBundleNaming: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: fed3af79f0a0a4a0c928b40cd8d5814a
   m_RemoteCatalogLoadPath:
-    m_Id: 
+    m_Id: a1f9b0580be754b488a5a7c45d49f53c
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: 0083c0cb653a04c598b8997a5d65f639, type: 2}
   - {fileID: 11400000, guid: 4ded166c367e94b0e94e6d1abe9e1b8b, type: 2}
+  - {fileID: 11400000, guid: e4b350426380a49669e55a8eac892ebd, type: 2}
+  - {fileID: 11400000, guid: 03338f0fdaa5a4736aa8ad56b8fa9b7b, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -75,9 +77,9 @@ MonoBehaviour:
       - m_Id: 308a3191ad6724f988b3232d20af78ee
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: fed3af79f0a0a4a0c928b40cd8d5814a
-        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+        m_Value: CCDBuildData/8f346108-2eff-4145-b0fb-b03ae3e61dbf/latest
       - m_Id: a1f9b0580be754b488a5a7c45d49f53c
-        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+        m_Value: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/release_by_badge/latest/entry_by_path/content/?path=
     m_ProfileEntryNames:
     - m_Id: bee9f573a143c4e67b2c2dedad4431e4
       m_Name: BuildTarget
@@ -115,5 +117,6 @@ MonoBehaviour:
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}
-    m_NextInstanceId: 0
-    m_RegisteredServiceTypeRefs: []
+    m_NextInstanceId: 1
+    m_RegisteredServiceTypeRefs:
+    - UnityEditor.AddressableAssets.HostingServices.HttpHostingService, Unity.Addressables.Editor

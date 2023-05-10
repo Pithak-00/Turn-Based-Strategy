@@ -1594,7 +1594,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 461083637177488369, guid: 268f72b9c9add457c85ecffbd045c055,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: af763404060f94b2380ccb07d6aa3b46, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e0b8c157113ab4f098ea14d73c62e2f7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1694,11 +1694,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7218837221884324070}
   audioClipAssetReferenceList:
-  - m_AssetGUID: af763404060f94b2380ccb07d6aa3b46
+  - m_AssetGUID: e0b8c157113ab4f098ea14d73c62e2f7
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  - m_AssetGUID: e750aae227f724265a69629664ced6bf
+  - m_AssetGUID: 01ad79e4b06784e4d80c0ce53376569c
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
