@@ -51,7 +51,8 @@ public class UnitAddressables : MonoBehaviour
 
     IEnumerator LoadBundle()
     {
-        using (UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle("https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/5a1c3849-b765-40b3-8905-7828aa23d210/versions/1e993b90-272b-4396-add5-e1c27aa6f387/content/"))
+        //using (UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle("https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/1e92a659-c50e-4ce7-aa77-f2fb3496f730/versions/09a7085c-3e4d-47c8-996a-61ed78e0aeeb/content/"))
+        using (UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle("https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/a9fc97fb-50ee-4cdf-be43-4e9eeabd595b/versions/d6982625-1e9e-4469-993e-72c9dcf3bc8e/content/"))
         {
             yield return www.SendWebRequest();
 

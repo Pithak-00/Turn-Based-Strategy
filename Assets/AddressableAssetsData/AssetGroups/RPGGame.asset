@@ -17,80 +17,204 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: e7509b7838c334f5ca10477a2f6126e5
   m_SerializeEntries:
-  - m_GUID: 5788c89e4e1c64b779cd789cda81dbad
-    m_Address: UnitWarrior
+  - m_GUID: 75082d08f2121475bb569e190da2c34b
+    m_Address: Assets/Scenes/TestScene.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 834b140b9abf24d81bdb78e52256d4bd
-    m_Address: UnitMonk
+  - m_GUID: f3a4ddcc9b5224fc3b2ed61e3c3af1b3
+    m_Address: Assets/Font/NotoSansJP-Regular.ttf
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 6e4bbed9d9b364d3ab6854e29b0f2e8a
-    m_Address: UnitBlackMage
+  - m_GUID: 4962acf16b0114f81bc379d53777d40e
+    m_Address: Assets/Font/NotoSansJP-Regular SDF.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: bdc626d3ba98b42fcae4f0c453e827c0
-    m_Address: UnitWhiteMage
+  - m_GUID: 1e604e82e99024a5a8d11853612960de
+    m_Address: Assets/Materials/UnitSelectedVisual.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 9e7c93aa016604c62ae8cb03fe2ddb82
-    m_Address: UnitEnemy
+  - m_GUID: 7cca30e1180994993b0b6ab9753f7005
+    m_Address: Assets/Materials/Red.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 01ad79e4b06784e4d80c0ce53376569c
-    m_Address: SwordAttack
+  - m_GUID: ab898d358aa2e43e0957a339bcefb903
+    m_Address: Assets/Materials/MouseVisual.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 5bf429096c3b44cb9852f28a4d1dfb3d
-    m_Address: RodAttack
+  - m_GUID: f9f2f50b02be343c5b0249c22ee67303
+    m_Address: Assets/Materials/GridYellow.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: e0b8c157113ab4f098ea14d73c62e2f7
-    m_Address: Moving
+  - m_GUID: cdbf58026907d458090f67c8da15381b
+    m_Address: Assets/Materials/GridWhite.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: f96cf6c35fc0a4ddfa4569868ceb5a44
-    m_Address: MagicHeal
+  - m_GUID: 685caa8a7e0dd4846a0e27c393f56fbe
+    m_Address: Assets/Materials/GridRedSoft.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: cd1f52b438bf047b19ac004470b3defb
-    m_Address: MagicAttack
+  - m_GUID: e441098ad8d5d42dea9a35fe52356037
+    m_Address: Assets/Materials/GridRed.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 3731102bc04bb4530b1e82ea7a08dc16
-    m_Address: PunchAttack
+  - m_GUID: d8be2f893989445de8d2537ead2cde0a
+    m_Address: Assets/Materials/GridGreenSoft.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fd4f7c98d9ed740f6a373088647ba72f
+    m_Address: Assets/Materials/GridGreen.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c6f502765e506488b8664608d5bf1cab
+    m_Address: Assets/Materials/GridBlue.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ccb0cebd8cf03448caaf3197f5b01853
+    m_Address: Assets/Materials/Grid.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b12fc4be7bf1241ddb4539ba5541ea9e
+    m_Address: Assets/Materials/GrenadeTrail.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3dd4c4565f6c240a987b725943d4f2b9
+    m_Address: Assets/Materials/GrenadeExplosion.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 914b0b5cae06049b1a9a9f20fe4c8c31
+    m_Address: Assets/Materials/Grenade.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9df4932cc8ca449dc8c1dd9e46395ede
+    m_Address: Assets/Materials/Green.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d34835802ff09465494986fe4546e8bc
+    m_Address: Assets/Materials/CrateDestroyed.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4faf57c3c39db456b8e6ef5c348aa2e8
+    m_Address: Assets/Materials/BulletProjectile.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 41680dad0f0243748b4e228f49a2e3c4
-    m_Address: PolygonPrototype_Texture_01
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_01.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 7d22fc6b9a431b043a917fb89a80bcfc
-    m_Address: PolygonPrototype_Texture_04
+  - m_GUID: 1e3f4dd6698853844b8cab4c33a09c96
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_10.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dcc9a0b939c99774089653966acc8d75
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_09.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4d1c11ecf91c18d4e86d3818e8c650cc
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_08.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6ba9f4735549d5b44b46a1e2a07ff751
-    m_Address: PolygonPrototype_Texture_07
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_07.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 25af05085d2957e42ac6b80b69ddd26a
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_06.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 40347e2344b3ed04a8165ea238a93a0b
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_05.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7d22fc6b9a431b043a917fb89a80bcfc
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_04.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 673443bdcb7bf2f47be93ce60e68966f
-    m_Address: PolygonPrototype_Texture_03
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_03.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 86cb957541c7c8542a6306ffb82e6833
-    m_Address: PolygonPrototype_Texture_01
+  - m_GUID: f685a57b9da560a448bb95374a652f90
+    m_Address: Assets/PolygonPrototype/Materials/PolygonPrototype_Texture_02.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: ba6d3750577556449812b1bbf8ccd2bc
-    m_Address: PolygonPrototype_Texture_07
+  - m_GUID: b5f71c859f9f9bf41badda8a4650082c
+    m_Address: Assets/PolygonPrototype/Models/Characters.fbx
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 24f3639160792c447b0654fa3b55a9da
-    m_Address: PolygonPrototype_Texture_03
+  - m_GUID: 45d8522aeaee5420b915151471383c2b
+    m_Address: Assets/Animations/Warrior/WarriorMove.fbx
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 56d0dcfd4f388074b86b2ca24191e027
-    m_Address: PolygonPrototype_Texture_04
+  - m_GUID: 78204eb0ac9044f27a926676663cae2e
+    m_Address: Assets/Animations/Warrior/WarriorIdle.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b9508c4234fcd4e3c92c5226b9707af7
+    m_Address: Assets/Animations/Warrior/WarriorAttack.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 947bd37693d7a4fa7a4bbcc149c75874
+    m_Address: Assets/Animations/Warrior/UnitWarriorAnimatorController.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 01ad79e4b06784e4d80c0ce53376569c
+    m_Address: Assets/Sound/SwordAttack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5bf429096c3b44cb9852f28a4d1dfb3d
+    m_Address: Assets/Sound/RodAttack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3731102bc04bb4530b1e82ea7a08dc16
+    m_Address: Assets/Sound/PunchAttack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e0b8c157113ab4f098ea14d73c62e2f7
+    m_Address: Assets/Sound/Moving.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 268f72b9c9add457c85ecffbd045c055
+    m_Address: Assets/Sound/MainMixer.mixer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f96cf6c35fc0a4ddfa4569868ceb5a44
+    m_Address: Assets/Sound/MagicHeal.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cd1f52b438bf047b19ac004470b3defb
+    m_Address: Assets/Sound/MagicAttack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 57019fb6c41684e849823f968c0009f3
+    m_Address: Assets/Prefabs/Unit/UnitRagdollEnemy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2e10258d10fd04b7ea9718b4c811a368
+    m_Address: Assets/Prefabs/Unit/UnitRagdoll.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9e7c93aa016604c62ae8cb03fe2ddb82
+    m_Address: Assets/Prefabs/Unit/UnitEnemy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d15bd29228373493fa3c127953e6b0ac
+    m_Address: Assets/Prefabs/Unit/Unit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bdc626d3ba98b42fcae4f0c453e827c0
+    m_Address: Assets/Prefabs/Unit/Player/UnitWhiteMage.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5788c89e4e1c64b779cd789cda81dbad
+    m_Address: Assets/Prefabs/Unit/Player/UnitWarrior.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 834b140b9abf24d81bdb78e52256d4bd
+    m_Address: Assets/Prefabs/Unit/Player/UnitMonk.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6e4bbed9d9b364d3ab6854e29b0f2e8a
+    m_Address: Assets/Prefabs/Unit/Player/UnitBlackMage.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
