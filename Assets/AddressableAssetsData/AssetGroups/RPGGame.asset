@@ -345,6 +345,122 @@ MonoBehaviour:
     m_Address: BlackMageAttack
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: c23f69c1f266b4e93b38de155fa665f1
+    m_Address: CustomFallbackShader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 707df7bca3440314f99cee94d4f6a202
+    m_Address: Prototype_Glass_Global
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd6a26ad55b421f4d84c98360284296e
+    m_Address: Prototype_Glass_Object
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6f2a6aa53be2674580ae1599bb9a33e
+    m_Address: Prototype_Global
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0335a1d8a6f92a5418f172da855570ad
+    m_Address: Prototype_Object
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 128e987d567d4e2c824d754223b3f3b0
+    m_Address: TMP_Bitmap
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 48bb5f55d8670e349b6e614913f9d910
+    m_Address: TMP_Bitmap-Custom-Atlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1e3b057af24249748ff873be7fafee47
+    m_Address: TMP_Bitmap-Mobile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 68e6db2ebdc24f95958faec2be5558d6
+    m_Address: TMP_SDF
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dd89cf5b9246416f84610a006f916af7
+    m_Address: TMP_SDF Overlay
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 14eb328de4b8eb245bb7cea29e4ac00b
+    m_Address: TMP_SDF SSD
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fe393ace9b354375a9cb14cdbbc28be4
+    m_Address: TMP_SDF-Mobile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bc1ede39bf3643ee8e493720e4259791
+    m_Address: TMP_SDF-Mobile Masking
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a02a7d8c237544f1962732b55a9aebf1
+    m_Address: TMP_SDF-Mobile Overlay
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c8d12adcee749c344b8117cf7c7eb912
+    m_Address: TMP_SDF-Mobile SSD
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f7ada0af4f174f0694ca6a487b8f543d
+    m_Address: TMP_SDF-Surface
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 85187c2149c549c5b33f0cdb02836b17
+    m_Address: TMP_SDF-Surface-Mobile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cf81c85f95fe47e1a27f6ae460cf182c
+    m_Address: TMP_Sprite
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 86cb957541c7c8542a6306ffb82e6833
+    m_Address: PolygonPrototype_Texture_01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c0cde391f6ee96749be5d6df0f1c83d5
+    m_Address: PolygonPrototype_Texture_01_Emission
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e6bcefb2a2fea3442809925e5d4fe224
+    m_Address: PolygonPrototype_Texture_02
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 24f3639160792c447b0654fa3b55a9da
+    m_Address: PolygonPrototype_Texture_03
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 56d0dcfd4f388074b86b2ca24191e027
+    m_Address: PolygonPrototype_Texture_04
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: df7c0e6cf8f64a44ea359c778e386616
+    m_Address: PolygonPrototype_Texture_05
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 39e6fbca0660715408ee44a3391e9b29
+    m_Address: PolygonPrototype_Texture_06
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ba6d3750577556449812b1bbf8ccd2bc
+    m_Address: PolygonPrototype_Texture_07
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ddab983e2c69e254983f35d0ef86f336
+    m_Address: PolygonPrototype_Texture_08
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 67844d2820eea35448a8cf014d6cba30
+    m_Address: PolygonPrototype_Texture_09
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 52b9d8791ea480146bc8d83c6b17e8ff
+    m_Address: PolygonPrototype_Texture_10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c17c346ecaac441729526df15553cdf2, type: 2}
   m_SchemaSet:

@@ -694,7 +694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &153456298
 Transform:
   m_ObjectHideFlags: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
     type: 3}
   unitPosition:
   - {fileID: 484875453}
-  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/aa03611a-f3ec-4081-a580-2b29985f2988/versions/fea01a5b-4b89-46f6-8042-a0b7f92320e7/content/
+  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/a3d376b3-5562-4644-910a-83eb58f0e06e/versions/12b2140a-effa-405e-9a79-97fdf7b1771b/content/
 --- !u!1001 &179808515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6252,22 +6252,22 @@ PrefabInstance:
     - target: {fileID: 8331279844328097467, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000016410377
+      value: 0.00000001641038
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844328097467, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000051729154
+      value: -0.0000000051729163
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844575948442, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000016410377
+      value: 0.00000001641038
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844575948442, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000051729154
+      value: -0.0000000051729163
       objectReference: {fileID: 0}
     - target: {fileID: 8331279844969784168, guid: 369c9f0b90aaf4607972c18dad6b5b6a,
         type: 3}
