@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.Networking;
-
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class UnitAddressables : MonoBehaviour
 {
@@ -25,14 +26,22 @@ public class UnitAddressables : MonoBehaviour
 
             bundle = DownloadHandlerAssetBundle.GetContent(www);
 
-            AssetBundleRequest request = bundle.LoadAssetAsync<GameObject>("Assets/Prefabs/Unit/Player/"+assetObject.name.ToString()+".prefab");
+            //AssetBundleRequest request = bundle.LoadAssetAsync<GameObject>("Assets/Prefabs/Unit/Player/"+assetObject.name.ToString()+".prefab");
+            AssetBundleRequest request = bundle.LoadAssetAsync<GameObject>(assetObject.name.ToString() + ".prefab");
             yield return request;
 
             GameObject prefab = request.asset as GameObject;
 
             for (int i = 0; i < unitPosition.Length; i++)
             {
-                Instantiate(prefab, unitPosition[i].position, unitPosition[i].rotation);
+                var prefabInstance = Instantiate(prefab, unitPosition[i].position, unitPosition[i].rotation);
+
+                //TODO:なんでshaderは勝手にHidden/InternalErrorShaderに変更されていたのかまだ不明だけど、とりあえず無理矢理にStandardに戻す
+                Renderer[] renderer = prefabInstance.GetComponentsInChildren<Renderer>();
+                foreach (var rendererAll in renderer) {
+                    Material material = rendererAll.material;
+                    material.shader = Shader.Find("Standard");
+                }
             }
         }
     }

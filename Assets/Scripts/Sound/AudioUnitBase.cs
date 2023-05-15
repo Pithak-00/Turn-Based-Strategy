@@ -5,29 +5,27 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.Networking;
 
 [RequireComponent(typeof(AudioSource))]
 public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
 {
-    [SerializeField]
-    protected AudioSource audioSource;
-
-    [SerializeField]
-    protected List<AssetReferenceT<AudioClip>> audioClipAssetReferenceList;
-
-    [SerializeField]
-    public bool audoPlay = false;
+    [SerializeField] protected AudioSource audioSource;
+    [SerializeField] protected List<AudioClip> audioClipAssetReferenceList;
+    [SerializeField] public bool audoPlay = false;
+    [SerializeField] private string assetBundleUrl;
 
     public bool IsPaused { get; private set; }
 
-    private List<AssetReferenceT<AudioClip>> assetReference;
+    private List<AudioClip> assetReference;
     private AsyncOperationHandle<AudioClip> asyncOperation;
+    private AssetBundle bundle;
 
     protected List<AudioClip> audioClipList;
 
     public virtual void Start()
     {
-        StartCoroutine(LoadAudioClip());
+        StartCoroutine(LoadAudioClip(assetBundleUrl));
 
         SoundManager.Instance.SetPausableList(this);
 
@@ -38,28 +36,29 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
     }
 
 
-    private IEnumerator LoadAudioClip()
+    private IEnumerator LoadAudioClip(string assetBundleUrl)
     {
         audioClipList = new List<AudioClip>();
 
-        assetReference = audioClipAssetReferenceList;
-
-        foreach (var asset in assetReference)
+        using (UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle(assetBundleUrl))
         {
-            asyncOperation = asset.LoadAssetAsync();
+            yield return www.SendWebRequest();
 
-            while (!asyncOperation.IsDone)
-            {
-                yield return null;
-            }
+            bundle = DownloadHandlerAssetBundle.GetContent(www);
 
-            if (asyncOperation.Status == AsyncOperationStatus.Succeeded)
+            foreach (var asset in audioClipAssetReferenceList)
             {
-                audioClipList.Add(asyncOperation.Result);
+                //AssetBundleRequest request = bundle.LoadAssetAsync<AudioClip>("Assets/Sound/" + asset.name.ToString() + ".mp3");
+                AssetBundleRequest request = bundle.LoadAssetAsync<AudioClip>(asset.name.ToString() + ".mp3");
+                //Debug.Log("Assets/Sound/" + asset.name.ToString() + ".mp3");
+                yield return request;
+
+                AudioClip prefab = request.asset as AudioClip;
+
+                audioClipList.Add(prefab);
+                Debug.Log(prefab.name.ToString());
             }
-            
         }
-        
     }
 
     public virtual void PlayDefault()

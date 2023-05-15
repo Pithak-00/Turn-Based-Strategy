@@ -727,7 +727,7 @@ MonoBehaviour:
     type: 3}
   unitPosition:
   - {fileID: 484875453}
-  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/a3d376b3-5562-4644-910a-83eb58f0e06e/versions/12b2140a-effa-405e-9a79-97fdf7b1771b/content/
+  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/1bbc6bea-a86b-4c2e-b200-f97ff04ac415/versions/fcdc32d5-021e-485b-934d-222786bd88fc/content/
 --- !u!1001 &179808515
 PrefabInstance:
   m_ObjectHideFlags: 0

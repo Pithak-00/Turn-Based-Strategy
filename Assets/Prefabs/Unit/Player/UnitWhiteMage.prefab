@@ -1576,19 +1576,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 6877229083410542336}
   audioClipAssetReferenceList:
-  - m_AssetGUID: e0b8c157113ab4f098ea14d73c62e2f7
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 5bf429096c3b44cb9852f28a4d1dfb3d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: f96cf6c35fc0a4ddfa4569868ceb5a44
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  - {fileID: 8300000, guid: e0b8c157113ab4f098ea14d73c62e2f7, type: 3}
+  - {fileID: 8300000, guid: 5bf429096c3b44cb9852f28a4d1dfb3d, type: 3}
+  - {fileID: 8300000, guid: f96cf6c35fc0a4ddfa4569868ceb5a44, type: 3}
   audoPlay: 0
+  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/72390164-aaac-4256-95d1-18914f3576a7/versions/8601be92-ee42-4731-9987-d9a84e479ed6/content/
   AudioClips: []
 --- !u!95 &3129860349564749700 stripped
 Animator:
