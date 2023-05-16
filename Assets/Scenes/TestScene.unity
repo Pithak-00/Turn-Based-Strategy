@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86a23e7f4871439ba330351f0a3a0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/a10f4e87-31a4-47a8-88a5-bf77c5cd64cb/versions/07bdc006-34cf-44ca-a107-fcac56733834/content/
+  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/7eb7c639-d5b8-4041-b30c-9ebccdb0a86a/versions/465592fa-74dd-46aa-b02f-212abcb9e90e/content/
 --- !u!4 &259751752
 Transform:
   m_ObjectHideFlags: 0
@@ -1657,7 +1657,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5108129b0d51f4ac394a3c67331b7391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 0}
+  audioClipAssetReferenceList:
+  - {fileID: 8300000, guid: e0b8c157113ab4f098ea14d73c62e2f7, type: 3}
+  audioClipList: []
 --- !u!4 &506682517
 Transform:
   m_ObjectHideFlags: 0

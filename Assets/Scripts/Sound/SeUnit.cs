@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TSM;
-using UnityEngine.AddressableAssets;
 
 public class SeUnit : AudioUnitBase
 {
-    public List<AssetReferenceT<AudioClip>> AudioClips;
-
     public override void Start()
     {
         base.Start();

@@ -37,6 +37,7 @@ public class AddressablesLoader : MonoBehaviour
 
             assetBundle = DownloadHandlerAssetBundle.GetContent(www);
 
+            //TODO:????????????????????????
             OnAnyAssetBundleLoaded?.Invoke(this, EventArgs.Empty);
         }
     }

@@ -5,6 +5,8 @@ using UnityEngine.Networking;
 
 public class UnitAddressables : MonoBehaviour
 {
+    public static event EventHandler OnAnyUnitLoaded;
+
     [SerializeField] private GameObject assetObject;
     [SerializeField] private Transform[] unitPosition;
 
@@ -39,6 +41,8 @@ public class UnitAddressables : MonoBehaviour
                 Material material = rendererAll.material;
                 material.shader = Shader.Find("Standard");
             }
+
+            OnAnyUnitLoaded?.Invoke(addressablesLoader, EventArgs.Empty);
         }
     }
 }

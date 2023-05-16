@@ -3,10 +3,7 @@ using UnityEngine;
 using System.Collections;
 using TSM;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.Networking;
 
 [RequireComponent(typeof(AudioSource))]
 public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
@@ -19,11 +16,13 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
 
     private AsyncOperationHandle<AudioClip> asyncOperation;
 
-    protected List<AudioClip> audioClipList;
+    //TODO:データロードチェック
+    [SerializeField] protected List<AudioClip> audioClipList;
 
     public virtual void Start()
     {
         AddressablesLoader.OnAnyAssetBundleLoaded += AddressablesLoader_OnAnyAssetBundleLoaded;
+        //UnitAddressables.OnAnyUnitLoaded += UnitAddressables_OnAnyUnitLoaded;
 
         SoundManager.Instance.SetPausableList(this);
 
@@ -31,6 +30,8 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
         {
             PlayDefault();
         }
+
+        UnitAddressables_OnAnyUnitLoaded();
     }
 
     private void AddressablesLoader_OnAnyAssetBundleLoaded(object sender, EventArgs e)
@@ -38,6 +39,11 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
         AddressablesLoader addressablesLoader = sender as AddressablesLoader;
 
         StartCoroutine(LoadAudioClip(addressablesLoader));
+    }
+
+    private void UnitAddressables_OnAnyUnitLoaded()
+    {
+        StartCoroutine(LoadAudioClip02());
     }
 
     private IEnumerator LoadAudioClip(AddressablesLoader addressablesLoader)
@@ -53,7 +59,24 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
             AudioClip prefab = request.asset as AudioClip;
 
             audioClipList.Add(prefab);
-            Debug.Log(prefab.name.ToString());
+            //Debug.Log(prefab.name.ToString());
+        }
+    }
+
+    private IEnumerator LoadAudioClip02()
+    {
+        audioClipList = new List<AudioClip>();
+        Debug.Log("LoadAudioClip02");
+        foreach (var asset in audioClipAssetReferenceList)
+        {
+            AssetBundleRequest request = AddressablesLoader.Instance.GetAssetBundle().LoadAssetAsync<AudioClip>(asset.name.ToString() + ".mp3");
+
+            yield return request;
+
+            AudioClip prefab = request.asset as AudioClip;
+
+            audioClipList.Add(prefab);
+            //Debug.Log(prefab.name.ToString());
         }
     }
 
