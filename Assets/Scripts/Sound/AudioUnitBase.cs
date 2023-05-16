@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using TSM;
@@ -13,19 +14,16 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
     [SerializeField] protected AudioSource audioSource;
     [SerializeField] protected List<AudioClip> audioClipAssetReferenceList;
     [SerializeField] public bool audoPlay = false;
-    [SerializeField] private string assetBundleUrl;
 
     public bool IsPaused { get; private set; }
 
-    private List<AudioClip> assetReference;
     private AsyncOperationHandle<AudioClip> asyncOperation;
-    private AssetBundle bundle;
 
     protected List<AudioClip> audioClipList;
 
     public virtual void Start()
     {
-        StartCoroutine(LoadAudioClip(assetBundleUrl));
+        AddressablesLoader.OnAnyAssetBundleLoaded += AddressablesLoader_OnAnyAssetBundleLoaded;
 
         SoundManager.Instance.SetPausableList(this);
 
@@ -35,29 +33,27 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
         }
     }
 
+    private void AddressablesLoader_OnAnyAssetBundleLoaded(object sender, EventArgs e)
+    {
+        AddressablesLoader addressablesLoader = sender as AddressablesLoader;
 
-    private IEnumerator LoadAudioClip(string assetBundleUrl)
+        StartCoroutine(LoadAudioClip(addressablesLoader));
+    }
+
+    private IEnumerator LoadAudioClip(AddressablesLoader addressablesLoader)
     {
         audioClipList = new List<AudioClip>();
 
-        using (UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle(assetBundleUrl))
+        foreach (var asset in audioClipAssetReferenceList)
         {
-            yield return www.SendWebRequest();
+            AssetBundleRequest request = addressablesLoader.GetAssetBundle().LoadAssetAsync<AudioClip>(asset.name.ToString() + ".mp3");
 
-            bundle = DownloadHandlerAssetBundle.GetContent(www);
+            yield return request;
 
-            foreach (var asset in audioClipAssetReferenceList)
-            {
-                //AssetBundleRequest request = bundle.LoadAssetAsync<AudioClip>("Assets/Sound/" + asset.name.ToString() + ".mp3");
-                AssetBundleRequest request = bundle.LoadAssetAsync<AudioClip>(asset.name.ToString() + ".mp3");
-                //Debug.Log("Assets/Sound/" + asset.name.ToString() + ".mp3");
-                yield return request;
+            AudioClip prefab = request.asset as AudioClip;
 
-                AudioClip prefab = request.asset as AudioClip;
-
-                audioClipList.Add(prefab);
-                Debug.Log(prefab.name.ToString());
-            }
+            audioClipList.Add(prefab);
+            Debug.Log(prefab.name.ToString());
         }
     }
 

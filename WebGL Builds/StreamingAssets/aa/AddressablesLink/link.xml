@@ -2,6 +2,7 @@
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="ActionBusyUI" preserve="all" />
     <type fullname="ActionButtonUI" preserve="all" />
+    <type fullname="AddressablesLoader" preserve="all" />
     <type fullname="BulletProjectile" preserve="all" />
     <type fullname="CameraController" preserve="all" />
     <type fullname="CameraManager" preserve="all" />
