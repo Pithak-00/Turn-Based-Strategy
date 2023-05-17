@@ -2,12 +2,11 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class AddressablesLoader : MonoBehaviour
 {
     public static AddressablesLoader Instance { get; private set; }
-
-    public static event EventHandler OnAnyAssetBundleLoaded;
 
     [SerializeField] private string assetBundleUrl;
 
@@ -22,6 +21,8 @@ public class AddressablesLoader : MonoBehaviour
             return;
         }
         Instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -36,9 +37,9 @@ public class AddressablesLoader : MonoBehaviour
             yield return www.SendWebRequest();
 
             assetBundle = DownloadHandlerAssetBundle.GetContent(www);
-
-            OnAnyAssetBundleLoaded?.Invoke(this, EventArgs.Empty);
         }
+
+        SceneManager.LoadScene("TestScene");
     }
 
     public AssetBundle GetAssetBundle()

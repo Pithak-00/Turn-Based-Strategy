@@ -11,19 +11,12 @@ public class UnitLoader : MonoBehaviour
 
     private void Start()
     {
-        AddressablesLoader.OnAnyAssetBundleLoaded += AddressablesLoader_OnAnyAssetBundleLoaded;
+        StartCoroutine(LoadBundle());
     }
 
-    private void AddressablesLoader_OnAnyAssetBundleLoaded(object sender, EventArgs e)
+    IEnumerator LoadBundle()
     {
-        AddressablesLoader addressablesLoader = sender as AddressablesLoader;
-
-        StartCoroutine(LoadBundle(addressablesLoader));
-    }
-
-    IEnumerator LoadBundle(AddressablesLoader addressablesLoader)
-    {
-        AssetBundleRequest request = addressablesLoader.GetAssetBundle().LoadAssetAsync<GameObject>(assetObject.name.ToString() + ".prefab");
+        AssetBundleRequest request = AddressablesLoader.Instance.GetAssetBundle().LoadAssetAsync<GameObject>(assetObject.name.ToString() + ".prefab");
 
         yield return request;
 
