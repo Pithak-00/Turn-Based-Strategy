@@ -393,7 +393,6 @@ GameObject:
   - component: {fileID: 3681794344357305374}
   - component: {fileID: 7280723214642461500}
   - component: {fileID: 5407722700423064427}
-  - component: {fileID: 3219041110619198435}
   m_Layer: 7
   m_Name: UnitWarrior
   m_TagString: Untagged
@@ -530,18 +529,6 @@ MonoBehaviour:
   ragdollPrefab: {fileID: 3043081751706599415, guid: 2e10258d10fd04b7ea9718b4c811a368,
     type: 3}
   originalRootBone: {fileID: 3038406266402615942}
---- !u!114 &3219041110619198435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3043081751706599408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d25a3a8ebaed4225ac9c94b7d821954, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4176716625001510281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,8 +1310,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e0b8c157113ab4f098ea14d73c62e2f7, type: 3}
   - {fileID: 8300000, guid: 01ad79e4b06784e4d80c0ce53376569c, type: 3}
   audoPlay: 0
-  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/72390164-aaac-4256-95d1-18914f3576a7/versions/8601be92-ee42-4731-9987-d9a84e479ed6/content/
-  AudioClips: []
+  audioClipList: []
 --- !u!95 &3129860349564749700 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95787105524477528, guid: 2f3e27eecb190e44a9af50723c394274,

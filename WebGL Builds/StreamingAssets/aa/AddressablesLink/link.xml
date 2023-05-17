@@ -10,7 +10,6 @@
     <type fullname="DestructibleCrate" preserve="all" />
     <type fullname="Door" preserve="all" />
     <type fullname="EnemyAI" preserve="all" />
-    <type fullname="FixShader" preserve="all" />
     <type fullname="GrenadeAction" preserve="all" />
     <type fullname="GrenadeProjectile" preserve="all" />
     <type fullname="GridDebugObject" preserve="all" />
@@ -47,9 +46,9 @@
     <type fullname="Unit" preserve="all" />
     <type fullname="UnitActionSystem" preserve="all" />
     <type fullname="UnitActionSystemUI" preserve="all" />
-    <type fullname="UnitAddressables" preserve="all" />
     <type fullname="UnitAnimator" preserve="all" />
     <type fullname="UnitBlackMageAnimator" preserve="all" />
+    <type fullname="UnitLoader" preserve="all" />
     <type fullname="UnitManager" preserve="all" />
     <type fullname="UnitMonkAnimator" preserve="all" />
     <type fullname="UnitRagdoll" preserve="all" />
@@ -132,7 +131,6 @@
   </assembly>
   <assembly fullname="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Camera" preserve="all" />
-    <type fullname="UnityEngine.Cubemap" preserve="all" />
     <type fullname="UnityEngine.GameObject" preserve="all" />
     <type fullname="UnityEngine.Light" preserve="all" />
     <type fullname="UnityEngine.LightmapSettings" preserve="all" />
