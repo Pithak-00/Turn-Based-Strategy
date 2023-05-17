@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using System.Collections;
 using TSM;
@@ -21,9 +20,6 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
 
     public virtual void Start()
     {
-        AddressablesLoader.OnAnyAssetBundleLoaded += AddressablesLoader_OnAnyAssetBundleLoaded;
-        //UnitAddressables.OnAnyUnitLoaded += UnitAddressables_OnAnyUnitLoaded;
-
         SoundManager.Instance.SetPausableList(this);
 
         if (audoPlay)
@@ -31,42 +27,13 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
             PlayDefault();
         }
 
-        UnitAddressables_OnAnyUnitLoaded();
+        StartCoroutine(LoadAudioClip());
     }
 
-    private void AddressablesLoader_OnAnyAssetBundleLoaded(object sender, EventArgs e)
-    {
-        AddressablesLoader addressablesLoader = sender as AddressablesLoader;
-
-        StartCoroutine(LoadAudioClip(addressablesLoader));
-    }
-
-    private void UnitAddressables_OnAnyUnitLoaded()
-    {
-        StartCoroutine(LoadAudioClip02());
-    }
-
-    private IEnumerator LoadAudioClip(AddressablesLoader addressablesLoader)
+    private IEnumerator LoadAudioClip()
     {
         audioClipList = new List<AudioClip>();
 
-        foreach (var asset in audioClipAssetReferenceList)
-        {
-            AssetBundleRequest request = addressablesLoader.GetAssetBundle().LoadAssetAsync<AudioClip>(asset.name.ToString() + ".mp3");
-
-            yield return request;
-
-            AudioClip prefab = request.asset as AudioClip;
-
-            audioClipList.Add(prefab);
-            //Debug.Log(prefab.name.ToString());
-        }
-    }
-
-    private IEnumerator LoadAudioClip02()
-    {
-        audioClipList = new List<AudioClip>();
-        Debug.Log("LoadAudioClip02");
         foreach (var asset in audioClipAssetReferenceList)
         {
             AssetBundleRequest request = AddressablesLoader.Instance.GetAssetBundle().LoadAssetAsync<AudioClip>(asset.name.ToString() + ".mp3");
@@ -76,7 +43,6 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
             AudioClip prefab = request.asset as AudioClip;
 
             audioClipList.Add(prefab);
-            //Debug.Log(prefab.name.ToString());
         }
     }
 

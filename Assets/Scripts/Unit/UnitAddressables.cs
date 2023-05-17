@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class UnitAddressables : MonoBehaviour
 {
@@ -41,8 +40,6 @@ public class UnitAddressables : MonoBehaviour
                 Material material = rendererAll.material;
                 material.shader = Shader.Find("Standard");
             }
-
-            OnAnyUnitLoaded?.Invoke(addressablesLoader, EventArgs.Empty);
         }
     }
 }

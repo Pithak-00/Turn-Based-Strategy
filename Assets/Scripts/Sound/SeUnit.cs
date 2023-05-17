@@ -16,7 +16,7 @@ public class SeUnit : AudioUnitBase
     public void PlaySe(string seName)
     {
         AudioClip audioClip = audioClipList.FirstOrDefault(clip => clip.name == seName);
-        Debug.Log( "seunit" + audioClip.name.ToString());
+
         if (audioClip != null)
         {
             audioSource.pitch = 1f;
