@@ -3,6 +3,7 @@ using System.Collections;
 using TSM;
 using System.Collections.Generic;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using Cysharp.Threading.Tasks;
 
 [RequireComponent(typeof(AudioSource))]
 public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
@@ -27,10 +28,10 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
             PlayDefault();
         }
 
-        StartCoroutine(LoadAudioClip());
+        _ = LoadAudioClip();
     }
 
-    private IEnumerator LoadAudioClip()
+    private async UniTaskVoid LoadAudioClip()
     {
         audioClipList = new List<AudioClip>();
 
@@ -38,7 +39,7 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
         {
             AssetBundleRequest request = AddressablesLoader.Instance.GetAssetBundle().LoadAssetAsync<AudioClip>(asset.name.ToString() + ".mp3");
 
-            yield return request;
+            await request.ToUniTask();
 
             AudioClip prefab = request.asset as AudioClip;
 

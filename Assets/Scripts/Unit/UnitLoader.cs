@@ -1,22 +1,18 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public class UnitLoader : MonoBehaviour
 {
     [SerializeField] private GameObject assetObject;
     [SerializeField] private Transform[] unitPosition;
 
-    private void Start()
-    {
-        StartCoroutine(LoadBundle());
-    }
-
-    IEnumerator LoadBundle()
+    private async UniTaskVoid Start()
     {
         AssetBundleRequest request = AddressablesLoader.Instance.GetAssetBundle().LoadAssetAsync<GameObject>(assetObject.name.ToString() + ".prefab");
 
-        yield return request;
+        await request.ToUniTask();
 
         GameObject prefab = request.asset as GameObject;
 
