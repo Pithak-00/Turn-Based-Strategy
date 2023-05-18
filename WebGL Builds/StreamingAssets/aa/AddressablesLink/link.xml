@@ -31,6 +31,8 @@
     <type fullname="PathfindingUpdater" preserve="all" />
     <type fullname="PunchAction" preserve="all" />
     <type fullname="RodAction" preserve="all" />
+    <type fullname="ScoreManager" preserve="all" />
+    <type fullname="ScoreUI" preserve="all" />
     <type fullname="ScreenShake" preserve="all" />
     <type fullname="ScreenShakeActions" preserve="all" />
     <type fullname="SeUnit" preserve="all" />

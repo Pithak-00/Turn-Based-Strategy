@@ -28,7 +28,7 @@ public abstract class AudioUnitBase : MonoBehaviour, IAudioPausable
             PlayDefault();
         }
 
-        _ = LoadAudioClip();
+        LoadAudioClip().Forget();
     }
 
     private async UniTaskVoid LoadAudioClip()

@@ -58,6 +58,7 @@ public class UnitManager : MonoBehaviour
         if (unit.IsEnemy())
         {
             enemyUnitList.Remove(unit);
+            ScoreManager.Instance.AddScore(100);
         }
         else
         {

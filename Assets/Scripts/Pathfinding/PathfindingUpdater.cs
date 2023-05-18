@@ -13,5 +13,6 @@ public class PathfindingUpdater : MonoBehaviour
     {
         DestructibleCrate destructibleCrate = sender as DestructibleCrate;
         Pathfinding.Instance.SetIsWalkableGridPosition(destructibleCrate.GetGridPosition(), true);
+        ScoreManager.Instance.AddScore(50);
     }
 }
