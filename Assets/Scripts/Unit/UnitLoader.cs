@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class UnitLoader : MonoBehaviour
 {
-    public static event EventHandler OnAnyUnitLoaded;
-
     [SerializeField] private GameObject assetObject;
     [SerializeField] private Transform[] unitPosition;
 

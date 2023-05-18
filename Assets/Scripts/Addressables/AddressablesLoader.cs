@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using Cysharp.Threading.Tasks;
 
 public class AddressablesLoader : MonoBehaviour
 {
@@ -25,21 +26,21 @@ public class AddressablesLoader : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    private async UniTaskVoid Start()
     {
-        StartCoroutine(LoadBundle(assetBundleUrl));
-    }
+        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(assetBundleUrl);
+        await request.SendWebRequest().ToUniTask();
 
-    IEnumerator LoadBundle(string assetBundleUrl)
-    {
-        using (UnityWebRequest www = UnityWebRequestAssetBundle.GetAssetBundle(assetBundleUrl))
+        if (request.result == UnityWebRequest.Result.Success)
         {
-            yield return www.SendWebRequest();
-
-            assetBundle = DownloadHandlerAssetBundle.GetContent(www);
+            assetBundle = DownloadHandlerAssetBundle.GetContent(request);
+            SceneManager.LoadScene("TestScene");
         }
-
-        SceneManager.LoadScene("TestScene");
+        else
+        {
+            Debug.LogError("アセットロード失敗: " + request.error);
+        }
+       
     }
 
     public AssetBundle GetAssetBundle()
@@ -49,6 +50,6 @@ public class AddressablesLoader : MonoBehaviour
 
     private void OnDestroy()
     {
-        assetBundle.UnloadAsync(false);
+        assetBundle.Unload(false);
     }
 }

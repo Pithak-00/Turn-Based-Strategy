@@ -345,10 +345,6 @@ MonoBehaviour:
     m_Address: BlackMageAttack
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: c23f69c1f266b4e93b38de155fa665f1
-    m_Address: CustomFallbackShader
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 707df7bca3440314f99cee94d4f6a202
     m_Address: Prototype_Glass_Global
     m_ReadOnly: 0
