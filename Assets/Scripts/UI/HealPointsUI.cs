@@ -1,59 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Member;
+using UniRx;
 
-public class HealPointsUI : MonoBehaviour
+namespace UI
 {
-    [SerializeField] private HealthSystem healthSystem;
-
-    private float waitTimeSecond = 0.5f;
-    private float waitTimer;
-    private Vector3 defalutPosition;
-
-    private void Start()
+    public class HealPointsUI : MonoBehaviour
     {
-        healthSystem.OnHealed += HealthSystem_OnHealed;
-        defalutPosition = gameObject.transform.localPosition;
+        [SerializeField] private HealthSystem healthSystem;
 
-        Hide();
-    }
+        private float waitTimeSecond = 0.5f;
+        private float waitTimer;
+        private Vector3 defalutPosition;
 
-    private void Update()
-    {
-        waitTimer += Time.deltaTime;
-
-        if (waitTimer >= waitTimeSecond)
+        private void Start()
         {
-            Fly();
+            healthSystem.OnHealed.Subscribe(_=> Show());
+            defalutPosition = gameObject.transform.localPosition;
 
-            if (waitTimer >= waitTimeSecond + 0.5f)
+            Hide();
+        }
+
+        private void Update()
+        {
+            waitTimer += Time.deltaTime;
+
+            if (waitTimer >= waitTimeSecond)
             {
-                Hide();
+                Fly();
+
+                if (waitTimer >= waitTimeSecond + 0.5f)
+                {
+                    Hide();
+                }
             }
         }
-    }
 
-    private void Show()
-    {
-        waitTimer = 0f;
-        gameObject.SetActive(true);
-        gameObject.transform.localPosition = defalutPosition;
-    }
+        private void Show()
+        {
+            waitTimer = 0f;
+            gameObject.SetActive(true);
+            gameObject.transform.localPosition = defalutPosition;
+        }
 
-    private void Fly()
-    {
-        Vector3 pos = gameObject.transform.localPosition;
-        pos.y += 0.01f;
-        gameObject.transform.localPosition = pos;
-    }
+        private void Fly()
+        {
+            Vector3 pos = gameObject.transform.localPosition;
+            pos.y += 0.01f;
+            gameObject.transform.localPosition = pos;
+        }
 
-    private void Hide()
-    {
-        gameObject.SetActive(false);
-    }
-
-    private void HealthSystem_OnHealed(object sender, int damageAmount)
-    {
-        Show();
+        private void Hide()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

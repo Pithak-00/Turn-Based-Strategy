@@ -1,71 +1,62 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using Member;
 
-public class GridObject
+namespace Grid
 {
-    private GridSystem<GridObject> gridSystem;
-    private GridPosition gridPosition;
-    private List<Unit> unitList;
-    private IInteractable interactable;
-
-    public GridObject(GridSystem<GridObject> gridSystem, GridPosition gridPosition)
+    public class GridObject
     {
-        this.gridSystem = gridSystem;
-        this.gridPosition = gridPosition;
-        unitList = new List<Unit>();
-    }
+        private GridSystem<GridObject> gridSystem;
+        private GridPosition gridPosition;
+        private List<MemberCharacter> memberList;
 
-    public override string ToString()
-    {
-        string unitString = "";
-        foreach(Unit unit in unitList)
+        public GridObject(GridSystem<GridObject> gridSystem, GridPosition gridPosition)
         {
-            unitString += unit + "\n";
+            this.gridSystem = gridSystem;
+            this.gridPosition = gridPosition;
+            memberList = new List<MemberCharacter>();
         }
 
-        return gridPosition.ToString() + "\n" + unitString;
-    }
-
-    public void AddUnit(Unit unit)
-    {
-        unitList.Add(unit);
-    }
-
-    public void RemoveUnit(Unit unit)
-    {
-        unitList.Remove(unit);
-    }
-
-    public List<Unit> GetUnitList()
-    {
-        return unitList;
-    }
-
-    public bool HasAnyUnit()
-    {
-        return unitList.Count > 0;
-    }
-
-    public Unit GetUnit()
-    {
-        if(HasAnyUnit())
+        public override string ToString()
         {
-            return unitList[0];
+            string unitString = "";
+            foreach (MemberCharacter member in memberList)
+            {
+                unitString += member + "\n";
+            }
+
+            return gridPosition.ToString() + "\n" + unitString;
         }
-        else
+
+        public void AddUnit(MemberCharacter member)
         {
-            return null;
+            memberList.Add(member);
         }
-    }
 
-    public IInteractable GetInteractable()
-    {
-        return interactable;
-    }
+        public void RemoveUnit(MemberCharacter member)
+        {
+            memberList.Remove(member);
+        }
 
-    public void SetInteractable(IInteractable interactable)
-    {
-        this.interactable = interactable;
+        public List<MemberCharacter> GetUnitList()
+        {
+            return memberList;
+        }
+
+        public bool HasAnyUnit()
+        {
+            return memberList.Count > 0;
+        }
+
+        public MemberCharacter GetUnit()
+        {
+            if (HasAnyUnit())
+            {
+                return memberList[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

@@ -2,15 +2,18 @@ using TMPro;
 using UniRx;
 using UnityEngine;
 
-public class ScoreUI : MonoBehaviour
+namespace UI
 {
-    [SerializeField] private TextMeshProUGUI textMeshPro;
-
-    private void Start()
+    public class ScoreUI : MonoBehaviour
     {
-        ScoreManager.Instance
-            .Score
-            .Subscribe(x => textMeshPro.text = $"Score: {x}")
-            .AddTo(this);
+        [SerializeField] private TextMeshProUGUI textMeshPro;
+
+        private void Start()
+        {
+            ScoreManager.Instance
+                .Score
+                .Subscribe(x => textMeshPro.text = $"Score: {x}")
+                .AddTo(this);
+        }
     }
 }

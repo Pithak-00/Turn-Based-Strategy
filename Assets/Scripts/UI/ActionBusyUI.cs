@@ -1,41 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UniRx;
+using Command;
 
-public class ActionBusyUI : MonoBehaviour
+namespace UI
 {
-    [SerializeField] private TextMeshProUGUI textMeshPro;
-
-    private void Start()
+    public class ActionBusyUI : MonoBehaviour
     {
-        UnitActionSystem.Instance.OnBusyChanged += UnitActionSystem_OnBusyChanged;
+        [SerializeField] private TextMeshProUGUI textMeshPro;
 
-        Hide();
-    }
-
-    private void Show()
-    {
-        BaseAction selectedAction = UnitActionSystem.Instance.GetSelectedAction();
-        textMeshPro.text = selectedAction.GetActionName();
-
-        gameObject.SetActive(true);
-    }
-
-    private void Hide()
-    {
-        gameObject.SetActive(false);
-    }
-
-    private void UnitActionSystem_OnBusyChanged(object sender, bool isBusy)
-    {
-        if (isBusy)
+        private void Start()
         {
-            Show();
-        }
-        else
-        {
+            MemberCommandSystem.Instance.OnBusyChanged.Subscribe(isBusy => UpdateBusy(isBusy));
+
             Hide();
+        }
+
+        private void Show()
+        {
+            BaseCommand selectedAction = MemberCommandSystem.Instance.GetSelectedCommand();
+            textMeshPro.text = selectedAction.GetCommandName();
+
+            gameObject.SetActive(true);
+        }
+
+        private void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
+        private void UpdateBusy(bool isBusy)
+        {
+            if (isBusy)
+            {
+                Show();
+            }
+            else
+            {
+                Hide();
+            }
         }
     }
 }
