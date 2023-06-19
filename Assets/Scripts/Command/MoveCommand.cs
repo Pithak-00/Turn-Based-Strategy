@@ -2,11 +2,15 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Grid;
+using UniRx;
 
 namespace Command
 {
     public class MoveCommand : BaseCommand
     {
+        public ISubject<MoveCommand> OnStartMoveCommand = new Subject<MoveCommand>();
+        public ISubject<MoveCommand> OnEndMoveCommand = new Subject<MoveCommand>();
+
         [SerializeField] private int actionPointsCost;
         [SerializeField] private int maxDistance;
 
@@ -40,6 +44,7 @@ namespace Command
                 currentPositionIndex++;
                 if (currentPositionIndex >= positionList.Count)
                 {
+                    OnEndMoveCommand.OnNext(this);
                     ActionComplete();
                 }
             }
@@ -56,7 +61,7 @@ namespace Command
             {
                 positionList.Add(LevelGrid.Instance.GetWorldPosition(pathGridPosition));
             }
-
+            OnStartMoveCommand.OnNext(this);
             ActionStart(onActionComplete);
         }
 

@@ -8,7 +8,7 @@ public class LevelGrid : MonoBehaviour
 {
     public static LevelGrid Instance { get; private set; }
 
-    public ISubject<Unit> OnAnyUnitMovedGridPosition => new Subject<Unit>();
+    public ISubject<Unit> OnAnyUnitMovedGridPosition = new Subject<Unit>();
 
     [SerializeField] private Transform gridDebugObjectPrefab;
     [SerializeField] private int width;

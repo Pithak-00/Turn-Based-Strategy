@@ -24,11 +24,13 @@ namespace Member
 
         private void SetTriggerPunch()
         {
+            
             animator.SetTrigger("Punch");
         }
 
         private void SetBoolIsWalkingTrue()
         {
+           
             animator.SetBool("IsWalking", true);
         }
 

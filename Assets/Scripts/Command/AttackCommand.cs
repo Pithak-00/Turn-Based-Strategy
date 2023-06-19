@@ -9,7 +9,7 @@ namespace Command
 {
     public class AttackCommand : BaseCommand
     {
-        public static ISubject<Unit> OnEndAttack => new Subject<Unit>();
+        public static ISubject<Unit> OnEndAttack = new Subject<Unit>();
 
         [SerializeField] private int actionPointsCost;
         [SerializeField] private int maxDistance;

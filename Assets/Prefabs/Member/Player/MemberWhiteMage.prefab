@@ -750,9 +750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34931905e471143ab80a3b4de67c85cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionPointsCost: 0
-  maxDistance: 0
-  damagePoint: 0
+  actionPointsCost: 1
+  maxDistance: 2
+  damagePoint: 10
 --- !u!114 &5484369423301045648
 MonoBehaviour:
   m_ObjectHideFlags: 0

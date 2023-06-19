@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionPointsCost: 1
-  maxDistance: 1
+  maxDistance: 2
   damagePoint: 100
 --- !u!114 &7280723214642461500
 MonoBehaviour:

@@ -9,8 +9,8 @@ namespace Command
 {
     public abstract class BaseCommand : MonoBehaviour
     {
-        public ISubject<Unit> OnStartCommand => new Subject<Unit>(); //コマンド開始イベント
-        public ISubject<Unit> OnEndCommand => new Subject<Unit>(); //コマンド終了イベント
+        public ISubject<BaseCommand> OnStartCommand = new Subject<BaseCommand>(); //コマンド開始イベント
+        public ISubject<BaseCommand> OnEndCommand = new Subject<BaseCommand>(); //コマンド終了イベント
 
         protected MemberCharacter member;
         protected bool isActive;
@@ -49,7 +49,7 @@ namespace Command
             isActive = true;
             this.onActionComplete = onActionComplete;
 
-            OnStartCommand.OnNext(Unit.Default);
+            OnStartCommand.OnNext(this);
         }
 
         //コマンド終了
@@ -58,7 +58,7 @@ namespace Command
             isActive = false;
             onActionComplete();
 
-            OnEndCommand.OnNext(Unit.Default);
+            OnEndCommand.OnNext(this);
         }
 
         //メンバー
