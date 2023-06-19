@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1ceca4f25ca48718dcf27e02fef13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/19ac87f0-d40e-4ea1-aca7-83616a5a91ed/versions/59876553-0ef8-4d80-9335-b897854fbb92/content/
+  assetBundleUrl: https://23666d26-dd61-401d-b8f5-4967934b4faa.client-api.unity3dusercontent.com/client_api/v1/environments/22ced0ec-c5c6-4cf9-8215-5e3152a47cce/buckets/8f346108-2eff-4145-b0fb-b03ae3e61dbf/entries/c5d907f9-b5a7-4f96-85c6-84515951ca88/versions/3e58614b-9840-462a-9ce6-81322f0f748c/content/
 --- !u!1 &543588541
 GameObject:
   m_ObjectHideFlags: 0
