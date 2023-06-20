@@ -23,7 +23,12 @@ namespace Command
 
         private State state;
         private float stateTimer;
-        private MemberCharacter targetUnit;
+        private MemberCharacter targetMember;
+
+        [SerializeField] private LayerMask obstaclesLayerMask;
+
+        private int maxAttackDistance = 2;
+        private bool canAttack;
 
         private void Update()
         {
@@ -37,7 +42,7 @@ namespace Command
             switch (state)
             {
                 case State.BeforeHit:
-                    Vector3 aimDir = (targetUnit.GetWorldPosition() - member.GetWorldPosition()).normalized;
+                    Vector3 aimDir = (targetMember.GetWorldPosition() - member.GetWorldPosition()).normalized;
                     float rotateSpeed = 10f;
                     transform.forward = Vector3.Lerp(transform.forward, aimDir, Time.deltaTime * rotateSpeed);
                     break;
@@ -59,7 +64,7 @@ namespace Command
                     state = State.AfterHit;
                     float afterHitStateTime = 0.5f;
                     stateTimer = afterHitStateTime;
-                    targetUnit.Damage(damagePoint);
+                    targetMember.Damage(damagePoint);
                     break;
                 case State.AfterHit:
                     ActionComplete();
@@ -75,10 +80,12 @@ namespace Command
 
         public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)
         {
+            MemberCharacter targetMember = LevelGrid.Instance.GetMemberAtGridPosition(gridPosition);
+
             return new EnemyAIAction
             {
                 gridPosition = gridPosition,
-                actionValue = 200,
+                actionValue = 100 + Mathf.RoundToInt((1 - targetMember.GetHealthNormalized()) * 100f),
             };
         }
 
@@ -100,13 +107,13 @@ namespace Command
                         continue;
                     }
 
-                    if (!LevelGrid.Instance.HasAnyUnitOnGridPosition(testGridPosition))
+                    if (!LevelGrid.Instance.HasAnyMemberOnGridPosition(testGridPosition))
                     {
                         // その位置には空
                         continue;
                     }
 
-                    MemberCharacter targetUnit = LevelGrid.Instance.GetUnitAtGridPosition(testGridPosition);
+                    MemberCharacter targetUnit = LevelGrid.Instance.GetMemberAtGridPosition(testGridPosition);
 
                     if (targetUnit.IsEnemy() == member.IsEnemy())
                     {
@@ -123,7 +130,7 @@ namespace Command
 
         public override void TakeAction(GridPosition gridPosition, Action onActionComplete)
         {
-            targetUnit = LevelGrid.Instance.GetUnitAtGridPosition(gridPosition);
+            targetMember = LevelGrid.Instance.GetMemberAtGridPosition(gridPosition);
 
             state = State.BeforeHit;
             float beforeHitStateTime = 0.7f;
@@ -140,6 +147,68 @@ namespace Command
         public int GetMaxDistance()
         {
             return maxDistance;
+        }
+
+        public List<GridPosition> GetValidActionGridPositionList(GridPosition memberGridPosition)
+        {
+            List<GridPosition> validGridPositionList = new List<GridPosition>();
+
+            for (int x = -maxAttackDistance; x <= maxAttackDistance; x++)
+            {
+                for (int z = -maxAttackDistance; z <= maxAttackDistance; z++)
+                {
+                    GridPosition offsetGridPosition = new GridPosition(x, z);
+                    GridPosition testGridPosition = memberGridPosition + offsetGridPosition;
+
+                    if (!LevelGrid.Instance.IsValidGridPosition(testGridPosition))
+                    {
+                        continue;
+                    }
+
+                    int testDistance = Mathf.Abs(x) + Mathf.Abs(z);
+                    if (testDistance > maxAttackDistance)
+                    {
+                        continue;
+                    }
+
+                    if (!LevelGrid.Instance.HasAnyMemberOnGridPosition(testGridPosition))
+                    {
+                        // その位置には空
+                        continue;
+                    }
+
+                    MemberCharacter targetMember = LevelGrid.Instance.GetMemberAtGridPosition(testGridPosition);
+
+                    if (targetMember.IsEnemy() == member.IsEnemy())
+                    {
+                        // 敵の仲間
+                        continue;
+                    }
+
+                    Vector3 memberWorldPosition = LevelGrid.Instance.GetWorldPosition(memberGridPosition);
+                    Vector3 attackDir = (targetMember.GetWorldPosition() - member.GetWorldPosition()).normalized;
+
+                    float memberShoulderHeight = 1.7f;
+                    if (Physics.Raycast(
+                        memberWorldPosition + Vector3.up * memberShoulderHeight,
+                        attackDir,
+                        Vector3.Distance(memberWorldPosition, targetMember.GetWorldPosition()),
+                        obstaclesLayerMask))
+                    {
+                        //障害物により、ブロック
+                        continue;
+                    }
+
+                    validGridPositionList.Add(testGridPosition);
+                }
+            }
+
+            return validGridPositionList;
+        }
+
+        public int GetTargetCountAtPosition(GridPosition gridPosition)
+        {
+            return GetValidActionGridPositionList(gridPosition).Count;
         }
     }
 }

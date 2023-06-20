@@ -31,7 +31,7 @@ namespace Command
             return new EnemyAIAction
             {
                 gridPosition = gridPosition,
-                actionValue = 0
+                actionValue = 200
             };
         }
 

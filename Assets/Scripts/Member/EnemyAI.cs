@@ -89,11 +89,11 @@ namespace Member
         private bool TryTakeEnemyAIAction(MemberCharacter enemyMember, Action onEnemyAIActionComplete)
         {
             EnemyAIAction bestEnemyAIAction = null;
-            BaseCommand bestBaseAction = null;
+            BaseCommand bestBaseCommand = null;
 
-            foreach (BaseCommand baseAction in enemyMember.GetBaseActionArray())
+            foreach (BaseCommand baseCommand in enemyMember.GetBaseCommandArray())
             {
-                if (!enemyMember.CanSpendActionPointsToTakeAction(baseAction))
+                if (!enemyMember.CanSpendActionPointsToTakeAction(baseCommand))
                 {
                     //行動不可能
                     continue;
@@ -101,23 +101,23 @@ namespace Member
 
                 if (bestEnemyAIAction == null)
                 {
-                    bestEnemyAIAction = baseAction.GetBestEnemyAIAction();
-                    bestBaseAction = baseAction;
+                    bestEnemyAIAction = baseCommand.GetBestEnemyAIAction();
+                    bestBaseCommand = baseCommand;
                 }
                 else
                 {
-                    EnemyAIAction testEnemyAIAction = baseAction.GetBestEnemyAIAction();
+                    EnemyAIAction testEnemyAIAction = baseCommand.GetBestEnemyAIAction();
                     if (testEnemyAIAction != null && testEnemyAIAction.actionValue > bestEnemyAIAction.actionValue)
                     {
                         bestEnemyAIAction = testEnemyAIAction;
-                        bestBaseAction = baseAction;
+                        bestBaseCommand = baseCommand;
                     }
                 }
             }
 
-            if (bestEnemyAIAction != null && enemyMember.TrySpendActionPointsToTakeAction(bestBaseAction))
+            if (bestEnemyAIAction != null && enemyMember.TrySpendActionPointsToTakeAction(bestBaseCommand))
             {
-                bestBaseAction.TakeAction(bestEnemyAIAction.gridPosition, onEnemyAIActionComplete);
+                bestBaseCommand.TakeAction(bestEnemyAIAction.gridPosition, onEnemyAIActionComplete);
                 return true;
             }
             else

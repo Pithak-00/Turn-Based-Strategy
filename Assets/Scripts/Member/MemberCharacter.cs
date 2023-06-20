@@ -30,7 +30,7 @@ namespace Member
         private void Start()
         {
             gridPosition = LevelGrid.Instance.GetGridPosition(transform.position);
-            LevelGrid.Instance.AddUnitAtGridPosition(gridPosition, this);
+            LevelGrid.Instance.AddMemberAtGridPosition(gridPosition, this);
 
             TurnSystem.Instance.OnTurnChanged.Subscribe(_=> ResetActionPoint());
 
@@ -48,7 +48,7 @@ namespace Member
                 GridPosition oldGridPosition = gridPosition;
                 gridPosition = newGridPosition;
 
-                LevelGrid.Instance.UnitMovedGridPosition(this, oldGridPosition, newGridPosition);
+                LevelGrid.Instance.MemberMovedGridPosition(this, oldGridPosition, newGridPosition);
             }
         }
 
@@ -74,7 +74,7 @@ namespace Member
             return transform.position;
         }
 
-        public BaseCommand[] GetBaseActionArray()
+        public BaseCommand[] GetBaseCommandArray()
         {
             return baseCommandArray;
         }
@@ -147,7 +147,7 @@ namespace Member
 
         private void HealthSystem_OnDead()
         {
-            LevelGrid.Instance.RemoveUnitAtGridPosition(gridPosition, this);
+            LevelGrid.Instance.RemoveMemberAtGridPosition(gridPosition, this);
 
             Destroy(gameObject);
 

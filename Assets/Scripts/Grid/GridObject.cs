@@ -18,38 +18,38 @@ namespace Grid
 
         public override string ToString()
         {
-            string unitString = "";
+            string memberString = "";
             foreach (MemberCharacter member in memberList)
             {
-                unitString += member + "\n";
+                memberString += member + "\n";
             }
 
-            return gridPosition.ToString() + "\n" + unitString;
+            return gridPosition.ToString() + "\n" + memberString;
         }
 
-        public void AddUnit(MemberCharacter member)
+        public void AddMember(MemberCharacter member)
         {
             memberList.Add(member);
         }
 
-        public void RemoveUnit(MemberCharacter member)
+        public void RemoveMember(MemberCharacter member)
         {
             memberList.Remove(member);
         }
 
-        public List<MemberCharacter> GetUnitList()
+        public List<MemberCharacter> GetMemberList()
         {
             return memberList;
         }
 
-        public bool HasAnyUnit()
+        public bool HasAnyMember()
         {
             return memberList.Count > 0;
         }
 
-        public MemberCharacter GetUnit()
+        public MemberCharacter GetMember()
         {
-            if (HasAnyUnit())
+            if (HasAnyMember())
             {
                 return memberList[0];
             }

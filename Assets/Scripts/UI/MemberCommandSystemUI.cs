@@ -44,7 +44,7 @@ namespace UI
 
             if (selectedUnit != null)
             {
-                foreach (Command.BaseCommand baseAction in selectedUnit.GetBaseActionArray())
+                foreach (Command.BaseCommand baseAction in selectedUnit.GetBaseCommandArray())
                 {
                     Transform actionButtonTransform = Instantiate(commandButtonPrefab, commandButtonContainerTransform);
                     CommandButtonUI actionButtonUI = actionButtonTransform.GetComponent<CommandButtonUI>();

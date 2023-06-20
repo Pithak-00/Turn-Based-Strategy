@@ -53,7 +53,7 @@ namespace Grid
 
             MemberCommandSystem.Instance.OnSelectedMemberChanged.Subscribe(_ => UpdateGridVisual());
             MemberCommandSystem.Instance.OnSelectedCommandChanged.Subscribe(_ => UpdateGridVisual());
-            LevelGrid.Instance.OnAnyUnitMovedGridPosition.Subscribe(_ => UpdateGridVisual());
+            LevelGrid.Instance.OnAnyMemberMovedGridPosition.Subscribe(_ => UpdateGridVisual());
 
             UpdateGridVisual();
         }
@@ -159,7 +159,7 @@ namespace Grid
                         break;
                     case HealCommand healCommand:
                         gridVisualType = GridVisualType.Green;
-                        ShowGridPositionRange(selectedMember.GetGridPosition(), healCommand.GetMaxShootDistance(), GridVisualType.GreenSoft);
+                        ShowGridPositionRange(selectedMember.GetGridPosition(), healCommand.GetMaxHealDistance(), GridVisualType.GreenSoft);
                         break;
                 }
 

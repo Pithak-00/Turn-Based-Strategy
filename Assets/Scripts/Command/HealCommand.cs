@@ -15,7 +15,7 @@ namespace Command
         private enum State
         {
             Aiming,
-            Shooting,
+            Casting,
             Cooloff,
         }
 
@@ -23,7 +23,7 @@ namespace Command
 
         private State state;
         private float stateTimer;
-        private MemberCharacter targetUnit;
+        private MemberCharacter targetMember;
         private bool canHeal;
 
         private void Update()
@@ -38,11 +38,11 @@ namespace Command
             switch (state)
             {
                 case State.Aiming:
-                    Vector3 aimDir = (targetUnit.GetWorldPosition() - member.GetWorldPosition()).normalized;
+                    Vector3 aimDir = (targetMember.GetWorldPosition() - member.GetWorldPosition()).normalized;
                     float rotateSpeed = 10f;
                     transform.forward = Vector3.Lerp(transform.forward, aimDir, Time.deltaTime * rotateSpeed);
                     break;
-                case State.Shooting:
+                case State.Casting:
                     if (canHeal)
                     {
                         Heal();
@@ -65,11 +65,11 @@ namespace Command
             switch (state)
             {
                 case State.Aiming:
-                    state = State.Shooting;
-                    float shootingStateTime = 0.1f;
-                    stateTimer = shootingStateTime;
+                    state = State.Casting;
+                    float castingStateTime = 0.1f;
+                    stateTimer = castingStateTime;
                     break;
-                case State.Shooting:
+                case State.Casting:
                     state = State.Cooloff;
                     float coolOffStateTime = 0.5f;
                     stateTimer = coolOffStateTime;
@@ -82,7 +82,7 @@ namespace Command
 
         private void Heal()
         {
-            targetUnit.Heal(healPoint);
+            targetMember.Heal(healPoint);
         }
 
         public override string GetCommandName()
@@ -118,34 +118,34 @@ namespace Command
                         continue;
                     }
 
-                    if (!LevelGrid.Instance.HasAnyUnitOnGridPosition(testGridPosition))
+                    if (!LevelGrid.Instance.HasAnyMemberOnGridPosition(testGridPosition))
                     {
                         // その位置には空
                         continue;
                     }
 
-                    MemberCharacter targetUnit = LevelGrid.Instance.GetUnitAtGridPosition(testGridPosition);
+                    MemberCharacter targetMember = LevelGrid.Instance.GetMemberAtGridPosition(testGridPosition);
 
-                    if (targetUnit.IsEnemy() != member.IsEnemy())
+                    if (targetMember.IsEnemy() != member.IsEnemy())
                     {
                         // 仲間同士ではない
                         continue;
                     }
 
-                    if (targetUnit.GetHealthNormalized() == 1)
+                    if (targetMember.GetHealthNormalized() == 1)
                     {
                         // HPがマックス
                         continue;
                     }
 
                     Vector3 unitWorldPosition = LevelGrid.Instance.GetWorldPosition(unitGridPosition);
-                    Vector3 shootDir = (targetUnit.GetWorldPosition() - member.GetWorldPosition()).normalized;
+                    Vector3 shootDir = (targetMember.GetWorldPosition() - member.GetWorldPosition()).normalized;
 
                     float unitShoulderHeight = 1.7f;
                     if (Physics.Raycast(
                         unitWorldPosition + Vector3.up * unitShoulderHeight,
                         shootDir,
-                        Vector3.Distance(unitWorldPosition, targetUnit.GetWorldPosition()),
+                        Vector3.Distance(unitWorldPosition, targetMember.GetWorldPosition()),
                         obstaclesLayerMask))
                     {
                         //障害物により、ブロック
@@ -161,7 +161,7 @@ namespace Command
 
         public override void TakeAction(GridPosition gridPosition, Action onActionComplete)
         {
-            targetUnit = LevelGrid.Instance.GetUnitAtGridPosition(gridPosition);
+            targetMember = LevelGrid.Instance.GetMemberAtGridPosition(gridPosition);
 
             state = State.Aiming;
             float aimingStateTime = 1f;
@@ -172,24 +172,23 @@ namespace Command
             ActionStart(onActionComplete);
         }
 
-        public MemberCharacter GetTargetUnit()
+        public MemberCharacter GetTargetMember()
         {
-            return targetUnit;
+            return targetMember;
         }
 
-        public int GetMaxShootDistance()
+        public int GetMaxHealDistance()
         {
             return maxDistance;
         }
 
         public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)
         {
-            MemberCharacter targetUnit = LevelGrid.Instance.GetUnitAtGridPosition(gridPosition);
-
+            MemberCharacter targetMember = LevelGrid.Instance.GetMemberAtGridPosition(gridPosition);
             return new EnemyAIAction
             {
                 gridPosition = gridPosition,
-                actionValue = 100 + Mathf.RoundToInt((1 - targetUnit.GetHealthNormalized()) * 100f),
+                actionValue = 200 + Mathf.RoundToInt((1 - targetMember.GetHealthNormalized()) * 100f),
             };
         }
 

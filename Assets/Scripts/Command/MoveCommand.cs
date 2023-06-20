@@ -89,7 +89,7 @@ namespace Command
                         continue;
                     }
 
-                    if (LevelGrid.Instance.HasAnyUnitOnGridPosition(testGridPosition))
+                    if (LevelGrid.Instance.HasAnyMemberOnGridPosition(testGridPosition))
                     {
                         // その位置には他のUnitが存在している
                         continue;
@@ -126,14 +126,15 @@ namespace Command
 
         //敵のアクション
         //TODO:攻撃アクション追加
+        //TODO:コマンドがつけていない状態も対応するべき
         public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)
         {
-            //int targetCountAtGridPosition = member.GetAction<AttackCommand>().GetTargetCountAtPosition(gridPosition);
+            int targetCountAtGridPosition = member.GetAction<AttackCommand>().GetTargetCountAtPosition(gridPosition);
 
             return new EnemyAIAction
             {
                 gridPosition = gridPosition,
-                //actionValue = targetCountAtGridPosition * 10,
+                actionValue = targetCountAtGridPosition * 10,
             };
         }
 

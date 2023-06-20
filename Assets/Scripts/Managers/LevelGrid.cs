@@ -8,7 +8,7 @@ public class LevelGrid : MonoBehaviour
 {
     public static LevelGrid Instance { get; private set; }
 
-    public ISubject<Unit> OnAnyUnitMovedGridPosition = new Subject<Unit>();
+    public ISubject<Unit> OnAnyMemberMovedGridPosition = new Subject<Unit>();
 
     [SerializeField] private Transform gridDebugObjectPrefab;
     [SerializeField] private int width;
@@ -38,31 +38,31 @@ public class LevelGrid : MonoBehaviour
         Pathfinding.Instance.Setup(width, height, cellSize);
     }
 
-    public void AddUnitAtGridPosition(GridPosition gridPosition, MemberCharacter member)
+    public void AddMemberAtGridPosition(GridPosition gridPosition, MemberCharacter member)
     {
         GridObject gridObject = gridSystem.GetGridObject(gridPosition);
-        gridObject.AddUnit(member);
+        gridObject.AddMember(member);
     }
 
-    public List<MemberCharacter> GetUnitListAtGridPosition(GridPosition gridPosition)
+    public List<MemberCharacter> GetMemberListAtGridPosition(GridPosition gridPosition)
     {
         GridObject gridObject = gridSystem.GetGridObject(gridPosition);
-        return gridObject.GetUnitList();
+        return gridObject.GetMemberList();
     }
 
-    public void RemoveUnitAtGridPosition(GridPosition gridPosition, MemberCharacter member)
+    public void RemoveMemberAtGridPosition(GridPosition gridPosition, MemberCharacter member)
     {
         GridObject gridObject = gridSystem.GetGridObject(gridPosition);
-        gridObject.RemoveUnit(member);
+        gridObject.RemoveMember(member);
     }
 
-    public void UnitMovedGridPosition(MemberCharacter unit, GridPosition fromGridPosition, GridPosition toGridPosition)
+    public void MemberMovedGridPosition(MemberCharacter member, GridPosition fromGridPosition, GridPosition toGridPosition)
     {
-        RemoveUnitAtGridPosition(fromGridPosition, unit);
+        RemoveMemberAtGridPosition(fromGridPosition, member);
 
-        AddUnitAtGridPosition(toGridPosition, unit);
+        AddMemberAtGridPosition(toGridPosition, member);
 
-        OnAnyUnitMovedGridPosition.OnNext(Unit.Default);
+        OnAnyMemberMovedGridPosition.OnNext(Unit.Default);
     }
 
     public GridPosition GetGridPosition(Vector3 worldPosition) => gridSystem.GetGridPosition(worldPosition);
@@ -75,15 +75,15 @@ public class LevelGrid : MonoBehaviour
 
     public int GetHeight() => gridSystem.GetHeight();
 
-    public bool HasAnyUnitOnGridPosition(GridPosition gridPosition)
+    public bool HasAnyMemberOnGridPosition(GridPosition gridPosition)
     {
         GridObject gridObject = gridSystem.GetGridObject(gridPosition);
-        return gridObject.HasAnyUnit();
+        return gridObject.HasAnyMember();
     }
 
-    public MemberCharacter GetUnitAtGridPosition(GridPosition gridPosition)
+    public MemberCharacter GetMemberAtGridPosition(GridPosition gridPosition)
     {
         GridObject gridObject = gridSystem.GetGridObject(gridPosition);
-        return gridObject.GetUnit();
+        return gridObject.GetMember();
     }
 }
