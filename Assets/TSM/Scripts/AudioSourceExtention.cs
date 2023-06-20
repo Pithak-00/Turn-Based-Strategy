@@ -12,18 +12,25 @@ namespace TSM
         //１行でaudioClip, ボリューム、再生位置のランダマイズまで指定できるようにする//
         public static void Play(this AudioSource audioSource, AudioClip audioClip, float volume = 1f, bool isRandomStartTime = false)
         {
-            if (audioClip == null) return;
-
-            audioSource.clip = audioClip;
-            audioSource.volume = volume;
-
-            if (isRandomStartTime)
+            try
             {
-                audioSource.time = UnityEngine.Random.Range(0f, audioClip.length - 0.01f);
-                //結果がlengthと同値になるとシークエラーを起こすため -0.01秒する//
-            }
+                if (audioClip == null) return;
 
-            audioSource.Play();
+                audioSource.clip = audioClip;
+                audioSource.volume = volume;
+
+                if (isRandomStartTime)
+                {
+                    audioSource.time = UnityEngine.Random.Range(0f, audioClip.length - 0.01f);
+                    //結果がlengthと同値になるとシークエラーを起こすため -0.01秒する//
+                }
+
+                audioSource.Play();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e.Message);
+            }
         }
 
         public static IEnumerator PlayWithCompCallback(this AudioSource audioSource, AudioClip audioClip, float volume = 1f, UnityAction compCallback = null)

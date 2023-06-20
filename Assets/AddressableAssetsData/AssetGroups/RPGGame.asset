@@ -45,32 +45,8 @@ MonoBehaviour:
     m_Address: LoadingScene
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 01ad79e4b06784e4d80c0ce53376569c
-    m_Address: SwordAttack
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 5bf429096c3b44cb9852f28a4d1dfb3d
-    m_Address: RodAttack
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 3731102bc04bb4530b1e82ea7a08dc16
-    m_Address: PunchAttack
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: e0b8c157113ab4f098ea14d73c62e2f7
-    m_Address: Moving
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 268f72b9c9add457c85ecffbd045c055
     m_Address: MainMixer
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: f96cf6c35fc0a4ddfa4569868ceb5a44
-    m_Address: MagicHeal
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: cd1f52b438bf047b19ac004470b3defb
-    m_Address: MagicAttack
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: bdc626d3ba98b42fcae4f0c453e827c0
@@ -87,6 +63,30 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 6e4bbed9d9b364d3ab6854e29b0f2e8a
     m_Address: MemberBlackMage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cd1f52b438bf047b19ac004470b3defb
+    m_Address: Assets/Sound/MagicAttack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f96cf6c35fc0a4ddfa4569868ceb5a44
+    m_Address: Assets/Sound/MagicHeal.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3731102bc04bb4530b1e82ea7a08dc16
+    m_Address: Assets/Sound/PunchAttack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5bf429096c3b44cb9852f28a4d1dfb3d
+    m_Address: Assets/Sound/RodAttack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 01ad79e4b06784e4d80c0ce53376569c
+    m_Address: Assets/Sound/SwordAttack.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e0b8c157113ab4f098ea14d73c62e2f7
+    m_Address: Assets/Sound/Moving.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

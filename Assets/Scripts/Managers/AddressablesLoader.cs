@@ -38,7 +38,6 @@ public class AddressablesLoader : MonoBehaviour
         {
             Debug.LogError("アセットロード失敗: " + request.error);
         }
-
     }
 
     public AssetBundle GetAssetBundle()
