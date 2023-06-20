@@ -66,27 +66,43 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cd1f52b438bf047b19ac004470b3defb
-    m_Address: Assets/Sound/MagicAttack.mp3
+    m_Address: MagicAttack
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f96cf6c35fc0a4ddfa4569868ceb5a44
-    m_Address: Assets/Sound/MagicHeal.mp3
+    m_Address: MagicHeal
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3731102bc04bb4530b1e82ea7a08dc16
-    m_Address: Assets/Sound/PunchAttack.mp3
+    m_Address: PunchAttack
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5bf429096c3b44cb9852f28a4d1dfb3d
-    m_Address: Assets/Sound/RodAttack.mp3
+    m_Address: RodAttack
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 01ad79e4b06784e4d80c0ce53376569c
-    m_Address: Assets/Sound/SwordAttack.mp3
+    m_Address: SwordAttack
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e0b8c157113ab4f098ea14d73c62e2f7
-    m_Address: Assets/Sound/Moving.mp3
+    m_Address: Moving
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 19407c9f0f4344dd09b8857fc4eb6399
+    m_Address: EnemyMemberMonk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 22af59a98c119486f8f23da141957d9c
+    m_Address: EnemyMemberWarrior
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: df4289cbdd8474e36b5f23bb0e16927f
+    m_Address: EnemyMemberBlackMage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7f233afa9724b4ce4900cb32c437bd0d
+    m_Address: EnemyMemberWhiteMage
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

@@ -1560,7 +1560,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4446919239517956460
+--- !u!114 &7757280999922704971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1569,15 +1569,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3044327190613469256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab1af0f735f5a4629aaa52aeb1a0dcfd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fbc350930a1b4e1a974406d60537f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1462720796622485596}
   audioClipAssetReferenceList:
-  - {fileID: 8300000, guid: 621048dfc127a4fcb838cce7c96614b3, type: 3}
-  - {fileID: 8300000, guid: e619a18931a4a4855a7aead143419b96, type: 3}
-  - {fileID: 8300000, guid: 3159a29b41764444da1c2bc8ed469486, type: 3}
-  audoPlay: 0
+  - {fileID: 8300000, guid: e0b8c157113ab4f098ea14d73c62e2f7, type: 3}
+  - {fileID: 8300000, guid: 5bf429096c3b44cb9852f28a4d1dfb3d, type: 3}
+  - {fileID: 8300000, guid: cd1f52b438bf047b19ac004470b3defb, type: 3}
+  autoPlay: 0
   audioClipList: []
 --- !u!95 &3129860349564749700 stripped
 Animator:
