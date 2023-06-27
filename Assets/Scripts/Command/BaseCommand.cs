@@ -62,7 +62,7 @@ namespace Command
         }
 
         //メンバー
-        public MemberCharacter GetUnit()
+        public MemberCharacter GetMember()
         {
             return member;
         }

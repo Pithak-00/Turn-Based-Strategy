@@ -6,7 +6,7 @@ namespace Member
     public class MemberLoader : MonoBehaviour
     {
         [SerializeField] private GameObject assetObject;
-        [SerializeField] private Transform[] unitPosition;
+        [SerializeField] private Transform[] memberPosition;
 
         private async UniTaskVoid Start()
         {
@@ -16,9 +16,9 @@ namespace Member
 
             GameObject prefab = request.asset as GameObject;
 
-            for (int i = 0; i < unitPosition.Length; i++)
+            for (int i = 0; i < memberPosition.Length; i++)
             {
-                var prefabInstance = Instantiate(prefab, unitPosition[i].position, unitPosition[i].rotation);
+                var prefabInstance = Instantiate(prefab, memberPosition[i].position, memberPosition[i].rotation);
 
                 //TODO:なんでshaderは勝手にHidden/InternalErrorShaderに変更されていたのかまだ不明だけど、とりあえず無理矢理にStandardに戻す
                 Renderer[] renderer = prefabInstance.GetComponentsInChildren<Renderer>();

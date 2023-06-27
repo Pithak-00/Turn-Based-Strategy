@@ -14,10 +14,10 @@ public class MemberCommandSystem : MonoBehaviour
     public ISubject<bool> OnBusyChanged = new Subject<bool>();
     public ISubject<Unit> OnActionStarted = new Subject<Unit>();
 
-    [SerializeField] private MemberCharacter selectedUnit;
+    [SerializeField] private MemberCharacter selectedMember;
     [SerializeField] private LayerMask unitLayerMask;
 
-    private BaseCommand selectedAction;
+    private BaseCommand selectedCommand;
     private bool isBusy;
 
     private void Awake()
@@ -33,7 +33,7 @@ public class MemberCommandSystem : MonoBehaviour
 
     private void Start()
     {
-        SetSelectedUnit(selectedUnit);
+        SetSelectedMember(selectedMember);
     }
 
     private void Update()
@@ -60,32 +60,32 @@ public class MemberCommandSystem : MonoBehaviour
 
         //TODO:選択中キャラは死亡で行動できないようにする
         //選択中状態を抜け出す方法を考えるべき
-        if(selectedUnit == null)
+        if(selectedMember == null)
         {
             return;
         }
 
-        HandleSelectedAction();
+        HandleSelectedCommand();
     }
 
-    private void HandleSelectedAction()
+    private void HandleSelectedCommand()
     {
         if (InputManager.Instance.IsMouseButtonDownThisFrame())
         {
             GridPosition mouseGridPosition = LevelGrid.Instance.GetGridPosition(MouseWorld.GetPosition());
 
-            if (!selectedAction.IsValidActionGridPosition(mouseGridPosition))
+            if (!selectedCommand.IsValidActionGridPosition(mouseGridPosition))
             {
                 return;
             }
 
-            if (!selectedUnit.TrySpendActionPointsToTakeAction(selectedAction))
+            if (!selectedMember.TrySpendActionPointsToTakeAction(selectedCommand))
             {
                 return;
             }
 
             SetBusy();
-            selectedAction.TakeAction(mouseGridPosition, ClearBusy);
+            selectedCommand.TakeAction(mouseGridPosition, ClearBusy);
 
             OnActionStarted.OnNext(Unit.Default);
         }
@@ -114,7 +114,7 @@ public class MemberCommandSystem : MonoBehaviour
             {
                 if (raycastHit.transform.TryGetComponent(out MemberCharacter member))
                 {
-                    if (member == selectedUnit)
+                    if (member == selectedMember)
                     {
                         // Unitは既に選択中
                         return false;
@@ -127,13 +127,13 @@ public class MemberCommandSystem : MonoBehaviour
                     }
 
                     //TODO:ヒールコマンド選択中を修正
-                    if (selectedUnit != null && selectedAction == selectedUnit.GetAction<HealCommand>())
+                    if (selectedMember != null && selectedCommand == selectedMember.GetAction<HealCommand>())
                     {
                     // ヒールコマンド選択中
                         return false;
                     }
 
-                    SetSelectedUnit(member);
+                    SetSelectedMember(member);
                     return true;
                 }
             }
@@ -142,32 +142,32 @@ public class MemberCommandSystem : MonoBehaviour
         return false;
     }
 
-    public void SetSelectedUnit(MemberCharacter unit)
+    public void SetSelectedMember(MemberCharacter member)
     {
-        selectedUnit = unit;
+        selectedMember = member;
 
-        if (selectedUnit != null)
+        if (selectedMember != null)
         {
-            selectedAction = unit.GetAction<MoveCommand>();
+            selectedCommand = member.GetAction<MoveCommand>();
         }
 
         OnSelectedMemberChanged.OnNext(Unit.Default);
     }
 
-    public void SetSelectedAction(BaseCommand baseAction)
+    public void SetSelectedCommand(BaseCommand baseCommand)
     {
-        selectedAction = baseAction;
+        selectedCommand = baseCommand;
 
         OnSelectedCommandChanged.OnNext(Unit.Default);
     }
 
     public MemberCharacter GetSelectedMember()
     {
-        return selectedUnit;
+        return selectedMember;
     }
 
     public BaseCommand GetSelectedCommand()
     {
-        return selectedAction;
+        return selectedCommand;
     }
 }

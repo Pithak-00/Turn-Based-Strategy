@@ -11,7 +11,7 @@ namespace UI
         {
             unitUnselectBtn.onClick.AddListener(() =>
             {
-                MemberCommandSystem.Instance.SetSelectedUnit(null);
+                MemberCommandSystem.Instance.SetSelectedMember(null);
             });
         }
     }

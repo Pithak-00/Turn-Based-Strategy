@@ -20,7 +20,7 @@ namespace UI
 
             button.onClick.AddListener(() =>
             {
-                MemberCommandSystem.Instance.SetSelectedAction(baseCommand);
+                MemberCommandSystem.Instance.SetSelectedCommand(baseCommand);
             });
         }
 

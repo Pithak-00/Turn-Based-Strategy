@@ -151,7 +151,7 @@ namespace Member
 
             Destroy(gameObject);
 
-            MemberCommandSystem.Instance.SetSelectedUnit(null);
+            MemberCommandSystem.Instance.SetSelectedMember(null);
 
             OnAnyMemberDead.OnNext(this);
         }
