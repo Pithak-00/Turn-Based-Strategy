@@ -1,66 +1,54 @@
 <linker>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="ActionBusyUI" preserve="all" />
-    <type fullname="ActionButtonUI" preserve="all" />
-    <type fullname="BulletProjectile" preserve="all" />
-    <type fullname="CameraController" preserve="all" />
+    <type fullname="AddressablesLoader" preserve="all" />
+    <type fullname="CameraControl.CameraController" preserve="all" />
+    <type fullname="CameraControl.LookAtCamera" preserve="all" />
+    <type fullname="CameraControl.ScreenShakeActions" preserve="all" />
     <type fullname="CameraManager" preserve="all" />
-    <type fullname="DamagePointsUI" preserve="all" />
-    <type fullname="DestructibleCrate" preserve="all" />
-    <type fullname="Door" preserve="all" />
-    <type fullname="EnemyAI" preserve="all" />
-    <type fullname="GrenadeAction" preserve="all" />
-    <type fullname="GrenadeProjectile" preserve="all" />
-    <type fullname="GridDebugObject" preserve="all" />
-    <type fullname="GridSystemVisual" preserve="all" />
-    <type fullname="GridSystemVisualSingle" preserve="all" />
-    <type fullname="HealAction" preserve="all" />
-    <type fullname="HealPointsUI" preserve="all" />
-    <type fullname="HealthSystem" preserve="all" />
+    <type fullname="Command.AttackCommand" preserve="all" />
+    <type fullname="Command.HealCommand" preserve="all" />
+    <type fullname="Command.MagicCommand" preserve="all" />
+    <type fullname="Command.MagicObject" preserve="all" />
+    <type fullname="Command.MoveCommand" preserve="all" />
+    <type fullname="Command.WaitCommand" preserve="all" />
+    <type fullname="Grid.GridSystemVisual" preserve="all" />
+    <type fullname="Grid.GridSystemVisualSingle" preserve="all" />
     <type fullname="InputManager" preserve="all" />
-    <type fullname="InteractAction" preserve="all" />
-    <type fullname="InteractSphere" preserve="all" />
     <type fullname="LevelGrid" preserve="all" />
-    <type fullname="LookAtCamera" preserve="all" />
-    <type fullname="MagicAction" preserve="all" />
-    <type fullname="MagicProjectile" preserve="all" />
+    <type fullname="Member.BlackMageAnimator" preserve="all" />
+    <type fullname="Member.EnemyAI" preserve="all" />
+    <type fullname="Member.HealthSystem" preserve="all" />
+    <type fullname="Member.MemberCharacter" preserve="all" />
+    <type fullname="Member.MemberLoader" preserve="all" />
+    <type fullname="Member.MemberRagdoll" preserve="all" />
+    <type fullname="Member.MemberRagdollSpawner" preserve="all" />
+    <type fullname="Member.MemberSelectedVisual" preserve="all" />
+    <type fullname="Member.MonkAnimator" preserve="all" />
+    <type fullname="Member.WarriorAnimator" preserve="all" />
+    <type fullname="Member.WhiteMageAnimator" preserve="all" />
+    <type fullname="MemberCommandSystem" preserve="all" />
+    <type fullname="MemberManager" preserve="all" />
     <type fullname="MouseWorld" preserve="all" />
-    <type fullname="MoveAction" preserve="all" />
+    <type fullname="Path.PathfindingGridDebugObject" preserve="all" />
+    <type fullname="Path.PathfindingUpdater" preserve="all" />
     <type fullname="Pathfinding" preserve="all" />
-    <type fullname="PathfindingGridDebugObject" preserve="all" />
-    <type fullname="PathfindingUpdater" preserve="all" />
-    <type fullname="PunchAction" preserve="all" />
-    <type fullname="RodAction" preserve="all" />
     <type fullname="ScoreManager" preserve="all" />
-    <type fullname="ScoreUI" preserve="all" />
-    <type fullname="ScreenShake" preserve="all" />
-    <type fullname="ScreenShakeActions" preserve="all" />
-    <type fullname="SeUnit" preserve="all" />
-    <type fullname="ShootAction" preserve="all" />
-    <type fullname="SpinAction" preserve="all" />
-    <type fullname="SwordAction" preserve="all" />
+    <type fullname="SeMember" preserve="all" />
+    <type fullname="Stage.DestructibleCrate" preserve="all" />
     <type fullname="Testing" preserve="all" />
     <type fullname="TSM.AudioMixerManager" preserve="all" />
     <type fullname="TSM.SoundManager" preserve="all" />
     <type fullname="TurnSystem" preserve="all" />
-    <type fullname="TurnSystemUI" preserve="all" />
-    <type fullname="Unit" preserve="all" />
-    <type fullname="UnitActionSystem" preserve="all" />
-    <type fullname="UnitActionSystemUI" preserve="all" />
-    <type fullname="UnitAnimator" preserve="all" />
-    <type fullname="UnitBlackMageAnimator" preserve="all" />
-    <type fullname="UnitLoader" preserve="all" />
-    <type fullname="UnitManager" preserve="all" />
-    <type fullname="UnitMonkAnimator" preserve="all" />
-    <type fullname="UnitRagdoll" preserve="all" />
-    <type fullname="UnitRagdollSpawner" preserve="all" />
-    <type fullname="UnitSelectedVisual" preserve="all" />
-    <type fullname="UnitUnselectUI" preserve="all" />
-    <type fullname="UnitWarriorAnimator" preserve="all" />
-    <type fullname="UnitWhiteMageAnimator" preserve="all" />
-    <type fullname="UnitWorldUI" preserve="all" />
-    <type fullname="WaitAction" preserve="all" />
-    <type fullname="GridSystemVisual/GridVisualTypeMaterial" preserve="nothing" serialized="true" />
+    <type fullname="UI.ActionBusyUI" preserve="all" />
+    <type fullname="UI.CommandButtonUI" preserve="all" />
+    <type fullname="UI.DamagePointsUI" preserve="all" />
+    <type fullname="UI.HealPointsUI" preserve="all" />
+    <type fullname="UI.MemberCommandSystemUI" preserve="all" />
+    <type fullname="UI.MemberUnselectUI" preserve="all" />
+    <type fullname="UI.MemberWorldUI" preserve="all" />
+    <type fullname="UI.ScoreUI" preserve="all" />
+    <type fullname="UI.TurnSystemUI" preserve="all" />
+    <type fullname="Grid.GridSystemVisual/GridVisualTypeMaterial" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Cinemachine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Cinemachine.CinemachineBrain" preserve="all" />

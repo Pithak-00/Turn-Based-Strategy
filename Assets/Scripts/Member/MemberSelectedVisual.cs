@@ -19,6 +19,8 @@ namespace Member
             MemberCommandSystem.Instance.OnSelectedMemberChanged.Subscribe(_ => UpdateVisual());
 
             UpdateVisual();
+
+            meshRenderer.enabled = false;
         }
 
         private void UpdateVisual()
@@ -35,7 +37,7 @@ namespace Member
 
         private void OnDestroy()
         {
-            MemberCommandSystem.Instance.OnSelectedMemberChanged.OnCompleted();
+           //MemberCommandSystem.Instance.OnSelectedMemberChanged.OnCompleted();
         }
     }
 }
